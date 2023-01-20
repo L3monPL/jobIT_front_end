@@ -1,0 +1,33 @@
+.btn_search{
+    background-color: #202020;
+    padding: 8px 50px;
+    border-radius: 18px;
+    font-family: Verdana, Geneva, sans-serif;
+    border-width: 1px;
+    border-style:none;
+    border-color: none!important;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left 8px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.btn_search:focus {
+    outline: none !important;
+    border:none;
+    // box-shadow: 0 0 4px #719ECE;
+    // background-color: #464646;  
+}
+.btn_search:hover {
+    outline: none !important;
+    border:none;
+    // box-shadow: 0 0 4px #719ECE;
+    background-color: #464646;  
+    transition: 0.5s;
+}
+.component mat-icon {
+    position: absolute;
+    font-size: 22px;
+    padding-top: 6px;
+    padding-left: 12px;
+    color: rgba(255, 255, 255, 0.8); 
+}
