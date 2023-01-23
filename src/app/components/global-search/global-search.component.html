@@ -1,4 +1,36 @@
 <div class="component">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
-    <input class="btn_search" type="text" placeholder="Search">
+    <div class="btn_search_container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+        <input class="btn_search" type="text" placeholder="Search">
+    </div>
+   
+    <div class="select_btns">
+        <button class="btn_select" *ngFor="let option of options"
+              [value]="option.name"
+              (click)="onSelect(option.name)"
+              [ngClass]="{'selected': option.name === selectedOption}" ngDefaultControl>
+        {{option.name}}
+      </button>
+    </div>
+    Min salary
+    <div class="range-slider">
+            <input type="range" [(ngModel)]="salary" min="0" max="80000" (input)="updateSalary($event)">    
+    </div>
+    <div class="info_salary">
+        {{salary}} PLN
+    </div>
+    <div #menu class="localization">
+        <button class="btn_locations" (click)="isOpenMenuLocalization = !isOpenMenuLocalization">
+            Locations 
+            <mat-icon aria-hidden="false" fontIcon="location_on"></mat-icon>
+        </button>
+        <div #menu [ngClass]="{'openMenuLocalization': isOpenMenuLocalization, 'closedMenuLocalization': !isOpenMenuLocalization}">
+            <div class="title_menu_location">
+                Popular Locations
+            </div>
+            
+        </div>
+    </div>
 </div>
+
+

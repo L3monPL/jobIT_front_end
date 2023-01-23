@@ -68,16 +68,16 @@ export class SearchNavComponent implements OnInit {
       name: 'Python',
       image: 'assets/js.png'
     },
-    {
-      id: 13,
-      name: 'Game',
-      image: 'assets/js.png'
-    },
-    {
-      id: 14,
-      name: 'Data',
-      image: 'assets/js.png'
-    },
+    // {
+    //   id: 13,
+    //   name: 'Game',
+    //   image: 'assets/js.png'
+    // },
+    // {
+    //   id: 14,
+    //   name: 'Data',
+    //   image: 'assets/js.png'
+    // },
   ]
 
   constructor(){ 
