@@ -1,8 +1,18 @@
-<div class="nav">
-    <div class="list">
-        <div class="item" *ngFor="let tech of technology; let i = index">
-            <img src={{tech.image}} alt="">
-            <p>{{tech.name}}</p>
+<div class="nav_container">
+    <button class="btn_up" (click)="prev()">
+        <mat-icon fontIcon="expand_less"></mat-icon>
+    </button>
+    <div class="nav">
+        <!-- <button (click)="prev()">Prev</button> -->
+        <div #list class="list">
+            <div class="item" *ngFor="let tech of technology; let i = index">
+                <img src={{tech.image}} alt="">
+                <p>{{tech.name}}</p>
+            </div>
         </div>
+        <!-- <button (click)="next()">Next</button> -->
     </div>
+    <button class="btn_down" (click)="next()">
+        <mat-icon fontIcon="keyboard_arrow_down"></mat-icon>
+    </button>
 </div>

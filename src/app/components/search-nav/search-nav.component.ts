@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search-nav',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchNavComponent implements OnInit {
 
+  @ViewChild('list') list?: ElementRef
   technology = [
     {
       id: 1,
@@ -68,16 +69,16 @@ export class SearchNavComponent implements OnInit {
       name: 'Python',
       image: 'assets/js.png'
     },
-    // {
-    //   id: 13,
-    //   name: 'Game',
-    //   image: 'assets/js.png'
-    // },
-    // {
-    //   id: 14,
-    //   name: 'Data',
-    //   image: 'assets/js.png'
-    // },
+    {
+      id: 13,
+      name: 'Game',
+      image: 'assets/js.png'
+    },
+    {
+      id: 14,
+      name: 'Data',
+      image: 'assets/js.png'
+    },
   ]
 
   constructor(){ 
@@ -87,5 +88,16 @@ export class SearchNavComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
+  prev() {
+    this.list!.nativeElement.scrollTop -= 220;
+
+  }
+
+  next() {
+    this.list!.nativeElement.scrollTop += 220;
+
+  }
+  
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './main-content.component';
 import { GlobalSearchModule } from '../global-search/global-search.module';
+import { EmployeesSelectionModule } from '../employees-selection/employees-selection.module';
 
 
 
@@ -11,7 +12,8 @@ import { GlobalSearchModule } from '../global-search/global-search.module';
   ],
   imports: [
     CommonModule,
-    GlobalSearchModule
+    GlobalSearchModule,
+    EmployeesSelectionModule
   ],
   exports: [
     MainContentComponent
