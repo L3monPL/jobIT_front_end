@@ -22,60 +22,55 @@ export class SearchNavComponent implements OnInit {
     {
       id: 3,
       name: 'Java',
-      image: 'assets/js.png'
+      image: 'assets/java.png'
     },
     {
       id: 4,
       name: '.NET',
-      image: 'assets/js.png'
+      image: 'assets/net.png'
     },
     {
       id: 5,
       name: 'PHP',
-      image: 'assets/js.png'
+      image: 'assets/php.png'
     },
     {
       id: 6,
       name: 'HTML',
-      image: 'assets/js.png'
+      image: 'assets/html.png'
     },
     {
       id: 7,
       name: 'Angular',
-      image: 'assets/js.png'
+      image: 'assets/angular.png'
     },
     {
       id: 8,
       name: 'React',
-      image: 'assets/js.png'
+      image: 'assets/react.png'
     },
     {
       id: 9,
       name: 'Mobile',
-      image: 'assets/js.png'
+      image: 'assets/mobile.png'
     },
     {
       id: 10,
       name: 'Testing',
-      image: 'assets/js.png'
+      image: 'assets/testing.png'
     },
     {
       id: 11,
-      name: 'PHP',
-      image: 'assets/js.png'
+      name: 'Python',
+      image: 'assets/python.png'
     },
     {
       id: 12,
-      name: 'Python',
-      image: 'assets/js.png'
-    },
-    {
-      id: 13,
       name: 'Game',
       image: 'assets/js.png'
     },
     {
-      id: 14,
+      id: 13,
       name: 'Data',
       image: 'assets/js.png'
     },
