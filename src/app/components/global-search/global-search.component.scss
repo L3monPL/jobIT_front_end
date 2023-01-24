@@ -63,6 +63,9 @@
 .selected{
     background-color: #f06292!important;
 }
+.selectedColor{
+    color: #f06292!important;
+}
 .element{
     display: flex;
     flex-direction: row;
@@ -91,10 +94,11 @@ input[type=range] {
     margin-top: 8px;
     background-color: #202020;
     color: #d7d7d7;
-    min-width: 380px;
+    max-width: 400px;
     transition: 0.5s;
     padding: 1rem;
     border-radius: 4px;
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
   }
   
   .closedMenuLocalization {
@@ -114,6 +118,7 @@ input[type=range] {
     text-align: left 8px!important;
     font-size: 14px;
     transition: 0.5s;
+    width: 180px;
 }
 .btn_locations mat-icon{
     padding: 0px;
@@ -122,4 +127,14 @@ input[type=range] {
 }
 .info_salary{
     width: 76px;
+}
+.items_menu{
+    display: flex;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+.items_menu .btn_select{
+    background-color: #3f3f3f;
 }

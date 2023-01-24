@@ -20,15 +20,22 @@
         {{salary}} PLN
     </div>
     <div #menu class="localization">
-        <button class="btn_locations" (click)="isOpenMenuLocalization = !isOpenMenuLocalization">
-            Locations 
+        <button class="btn_locations" (click)="isOpenMenuLocalization = !isOpenMenuLocalization" [ngClass]="{'selectedColor': locationTxt !== locationsString()}">
+            {{locationsString()}} 
             <mat-icon aria-hidden="false" fontIcon="location_on"></mat-icon>
         </button>
         <div #menu [ngClass]="{'openMenuLocalization': isOpenMenuLocalization, 'closedMenuLocalization': !isOpenMenuLocalization}">
             <div class="title_menu_location">
                 Popular Locations
             </div>
-            
+            <div class="items_menu">
+                <button class="btn_select" *ngFor="let option of locations"
+                    [value]="option.name"
+                    (click)="onSelectLocation(option.name)"
+                    [ngClass]="{'selected': option.name === selectedOptionLocation}" ngDefaultControl>
+                    {{option.name}}
+                </button>
+            </div>
         </div>
     </div>
 </div>

@@ -22,7 +22,35 @@ export class GlobalSearchComponent implements OnInit {
     },
   ]
 
+  locations = [
+    {
+      name: 'Warszawa'
+    },
+    {
+      name: 'Poznań'
+    },
+    {
+      name: 'Trójmiasto'
+    },
+    {
+      name: 'Kraków'
+    },
+    {
+      name: 'Bydgoszcz'
+    },
+    {
+      name: 'Wrocław'
+    },
+    {
+      name: 'Szczecin'
+    },
+  ]
+
+  locationTxt = 'Locations'
+
   selectedOption?: string
+
+  selectedOptionLocation?: string
 
   salary = 2000;
 
@@ -41,6 +69,25 @@ export class GlobalSearchComponent implements OnInit {
 
   onSelect(option:string){
     this.selectedOption = option
+  }
+  onSelectLocation(option: string){
+    if (this.selectedOptionLocation == option) {
+      this.selectedOptionLocation = "Locations"
+    }
+    else{
+      this.selectedOptionLocation = option
+    }
+    
+  }
+  locationsString(){
+    let locationSet
+    if (!this.selectedOptionLocation) {
+      locationSet = "Locations"
+    }
+    else{
+      locationSet = this.selectedOptionLocation
+    }
+    return locationSet
   }
   updateSalary(event:any) {
     this.salary = event.target.value;
