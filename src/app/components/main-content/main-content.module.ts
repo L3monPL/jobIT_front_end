@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './main-content.component';
 import { GlobalSearchModule } from '../global-search/global-search.module';
 import { EmployeesSelectionModule } from '../employees-selection/employees-selection.module';
+import { ListContentModule } from '../list-content/list-content.module';
 
 
 
@@ -13,7 +14,7 @@ import { EmployeesSelectionModule } from '../employees-selection/employees-selec
   imports: [
     CommonModule,
     GlobalSearchModule,
-    EmployeesSelectionModule
+    ListContentModule
   ],
   exports: [
     MainContentComponent
