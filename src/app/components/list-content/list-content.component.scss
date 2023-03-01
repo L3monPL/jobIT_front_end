@@ -15,6 +15,7 @@
 //     cursor: pointer;
 // }
 .main_content{
+    display: flex;
     margin-top: 1rem;
     height: calc(100vh - 8.9rem);
     background-color: #202020;
@@ -22,4 +23,34 @@
     border-bottom-right-radius: 6px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
+}
+.item_card_list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 0.7rem;
+    width: 100%;
+    overflow-y: auto;
+}
+.item_card_list::-webkit-scrollbar {
+    display: none;
+}
+  
+.item_card_list {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+ }
+.item_card{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    background-color: #2c2c2c;
+    border-radius: 4px;
+    padding: 14px;
+}
+.image{
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 6px;
 }

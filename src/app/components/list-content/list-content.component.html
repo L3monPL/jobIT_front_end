@@ -1,8 +1,11 @@
-<div class="selection_container">
-    <!-- <div class="title_selection">
-        Employees
-    </div> -->
+<!-- <div class="selection_container"> -->
     <div class="main_content">
-        test
+        <div class="item_card_list">
+            <div *ngFor="let item of itemList" class="item_card">
+                <div class="image"></div>
+                {{item.title}}
+                {{item.date}}
+            </div>
+        </div>
     </div>
-</div>
+<!-- </div> -->
