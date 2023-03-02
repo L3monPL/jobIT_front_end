@@ -125,29 +125,30 @@ export class ListContentComponent implements OnInit {
   }
 
   selectItemOnList(){
-    console.log("clicked at element")
+    console.log("clicked at element on list")
   }
 
   
 
   openMenuLocations(id: number, event: MouseEvent){
-    event.stopPropagation();
     this.isOpenMenuLocalization = !this.isOpenMenuLocalization
     this.currentClicableItemLocationID = id
     console.log(this.isOpenMenuLocalization)
     this.menuClicked = true
+    event.stopPropagation();
+    this.onClick()
     return this.isOpenMenuLocalization
   }
 
   @HostListener('document:click', ['$event'])
-  onClick(event: MouseEvent) {
+  onClick(event?: MouseEvent) {
     if (this.menuClicked) {
       // obsługa kliknięcia poza elementem #menu
-      console.log('na element')
+      console.log('na lokalizacje')
     }
     else{
       // this.menuClicked = true;
-      console.log('poza elementem')
+      console.log('poza lokalizacją')
       this.isOpenMenuLocalization = false
     }
     this.menuClicked = false
