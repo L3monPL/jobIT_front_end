@@ -125,7 +125,10 @@ export class ListContentComponent implements OnInit {
   }
 
   selectItemOnList(){
-    console.log("clicked at element on list")
+    //ten if zabezpiecza przed odkliknięciem z menu kontekstowego na element z listy
+    if (this.isOpenMenuLocalization == false) {
+      console.log("clicked at element on list") 
+    }
   }
 
   
