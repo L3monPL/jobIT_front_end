@@ -98,7 +98,7 @@ export class GlobalSearchComponent implements OnInit {
     if (!this.menu!.nativeElement.contains(event.target)) {
       // zamknij menu
       this.isOpenMenuLocalization = false
-      console.log(this.isOpenMenuLocalization)
+      // console.log(this.isOpenMenuLocalization)
     } 
   }
 
