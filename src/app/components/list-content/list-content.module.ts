@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListContentComponent } from './list-content.component';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { ListContentComponent } from './list-content.component';
     ListContentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ],
   exports: [
     ListContentComponent

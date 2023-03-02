@@ -83,5 +83,15 @@
 }
 .locations_card{
     display: flex;
-    column-gap: 0.5rem;
+    column-gap: 0.3rem;
+}
+.locations_card p{
+    margin: 0;
+}
+.location_card_icon{
+    font-size: 1.1rem;
+}
+.locations_card mat-icon{
+    width: auto;
+    height: auto;
 }

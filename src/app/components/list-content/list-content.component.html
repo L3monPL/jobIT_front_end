@@ -14,8 +14,12 @@
                     </div>
                     <div class="right_card">
                         {{item.salary}}
-                        <div *ngIf="item.locations.length == 1" class="locations_card">{{item.locations[0]}}</div>
+                        <div *ngIf="item.locations.length == 1" class="locations_card">
+                            <mat-icon class="location_card_icon" fontIcon="location_on"></mat-icon>
+                            {{item.locations[0]}}
+                        </div>
                         <div *ngIf="item.locations.length !== 1" class="locations_card">
+                            <mat-icon class="location_card_icon" fontIcon="location_on"></mat-icon>
                             {{item.locations[0]}},
                             <p>+{{item.locations.length - 1}} Locations</p>
                             <!-- <div *ngFor="let location of item.locations" class="location_card">
