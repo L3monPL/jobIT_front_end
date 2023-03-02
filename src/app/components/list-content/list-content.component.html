@@ -1,7 +1,7 @@
 <!-- <div class="selection_container"> -->
     <div class="main_content">
         <div class="item_card_list">
-            <div *ngFor="let item of itemList" (click)="selectItemOnList()" class="item_card">
+            <div *ngFor="let item of itemList" (click)="selectItemOnList()" class="item_card container_list_menu">
                 <div class="image"></div>
                 <div class="content_card">
                     <div class="left_card">
@@ -18,12 +18,12 @@
                             <mat-icon class="location_card_icon" fontIcon="location_on"></mat-icon>
                             {{item.locations[0]}}
                         </div>
-                        <div #menu *ngIf="item.locations.length !== 1" class="locations_card container_list_menu">
+                        <div #menu *ngIf="item.locations.length !== 1" (click)="openMenuLocations(item.id, $event)" class="locations_card">
                             <mat-icon class="location_card_icon" fontIcon="location_on"></mat-icon>
                             {{item.locations[0]}},
-                            <p class="clicable" (click)="openMenuLocations(item.id, $event)">+{{item.locations.length - 1}} Locations</p>
+                            <p class="clicable">+{{item.locations.length - 1}} Locations</p>
                             <!-- MENU -->
-                            <div #menu *ngIf="this.currentClicableItemLocationID == item.id" class="locations_menu" [ngClass]="{'openMenuLocalization': isOpenMenuLocalization, 'closedMenuLocalization': !isOpenMenuLocalization}">
+                            <div #menu *ngIf="this.currentClicableItemLocationID == item.id" [ngClass]="{'openMenuLocalization': isOpenMenuLocalization, 'closedMenuLocalization': !isOpenMenuLocalization}">
                                 <div *ngFor="let location of item.locations; let i = index" class="location_card">
                                     <p *ngIf="i >= 1">{{location}}</p>
                                 </div>
