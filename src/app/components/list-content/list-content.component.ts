@@ -9,12 +9,12 @@ export class ListContentComponent {
 
   itemList = [
     {
-      title: 'Testowe ogłoszenie test!@#123',
+      title: 'Testowe ogłoszenie TeamLider',
       date: '12-02-2023',
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -23,7 +23,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -32,7 +32,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -41,7 +41,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -50,7 +50,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -59,7 +59,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -68,7 +68,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -77,7 +77,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -86,7 +86,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
     {
@@ -95,7 +95,7 @@ export class ListContentComponent {
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
       remote: true,
-      locations: ['warszawa, poznań, katowice'],
+      locations: ['warszawa', 'poznań', 'katowice'],
       stack: ['Angular', 'Node.js', 'RxJS']
     },
 

@@ -3,8 +3,27 @@
         <div class="item_card_list">
             <div *ngFor="let item of itemList" class="item_card">
                 <div class="image"></div>
-                {{item.title}}
-                {{item.date}}
+                <div class="content_card">
+                    <div class="left_card">
+                        {{item.title}}
+                        <div class="stack_card">
+                            <div *ngFor="let stack of item.stack" class="item_stack_card">
+                                {{stack}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_card">
+                        {{item.salary}}
+                        <div *ngIf="item.locations.length == 1" class="locations_card">{{item.locations[0]}}</div>
+                        <div *ngIf="item.locations.length !== 1" class="locations_card">
+                            <div *ngFor="let location of item.locations" class="location_card">
+                                {{location}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- {{item.date}} -->
             </div>
         </div>
     </div>
