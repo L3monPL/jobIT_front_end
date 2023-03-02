@@ -16,7 +16,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa', 'poznań', 'katowice'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['ip networks', 'it support', 'english']
     },
     {
       id: 1,
@@ -26,7 +26,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['kubernets', 'ubuntu', 'amazon aws']
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['katowice'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['Angular', 'TypeScript', 'RxJS']
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa', 'poznań'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['Angular', 'Node.js', 'amazon aws']
     },
     {
       id: 4,
@@ -56,7 +56,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa', 'katowice'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['it support', 'Node.js', 'TypeScript']
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa', 'poznań', 'katowice', 'wrocław', 'szczecin'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['Angular', 'TypeScript', 'RxJS']
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ export class ListContentComponent implements OnInit {
       company: 'AVG Systems',
       remote: true,
       locations: ['warszawa', 'poznań', 'katowice'],
-      stack: ['Angular', 'Node.js', 'RxJS']
+      stack: ['TypeScript', 'Node.js', 'kubernets']
     },
     {
       id: 7,
