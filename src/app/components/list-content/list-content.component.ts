@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-list-content',
@@ -114,8 +114,7 @@ export class ListContentComponent implements OnInit {
   isOpenMenuLocalization = false
 
   currentClicableItemLocationID?: number
-
-
+  menuClicked = false
 
   constructor(){ 
 
@@ -125,13 +124,34 @@ export class ListContentComponent implements OnInit {
 
   }
 
+  selectItemOnList(){
+    console.log("clicked at element")
+  }
+
   
 
-  openMenuLocations(id: number){
+  openMenuLocations(id: number, event: MouseEvent){
+    event.stopPropagation();
     this.isOpenMenuLocalization = !this.isOpenMenuLocalization
     this.currentClicableItemLocationID = id
     console.log(this.isOpenMenuLocalization)
+    this.menuClicked = true
     return this.isOpenMenuLocalization
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (this.menuClicked) {
+      // obsługa kliknięcia poza elementem #menu
+      console.log('na element')
+    }
+    else{
+      // this.menuClicked = true;
+      console.log('poza elementem')
+      this.isOpenMenuLocalization = false
+    }
+    this.menuClicked = false
+    
   }
 
 }
