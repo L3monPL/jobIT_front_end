@@ -10,7 +10,7 @@ export class ListContentComponent implements OnInit {
   itemList = [
     {
       id: 0,
-      title: 'Testowe ogłoszenie TeamLider',
+      title: 'Junior Specjalist IT Network Operations',
       date: '12-02-2023',
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
@@ -20,7 +20,7 @@ export class ListContentComponent implements OnInit {
     },
     {
       id: 1,
-      title: 'Testowe ogłoszenie test!@#123',
+      title: 'Devops Engineer',
       date: '12-02-2023',
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
@@ -30,7 +30,7 @@ export class ListContentComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Testowe ogłoszenie test!@#123',
+      title: 'Angular Frontend Developer',
       date: '12-02-2023',
       salary: '6000 zł - 9500 zł',
       company: 'AVG Systems',
