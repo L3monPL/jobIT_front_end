@@ -5,11 +5,11 @@
     </div>
    
     <div class="select_btns">
-        <button class="btn_select" *ngFor="let option of options"
-              [value]="option.name"
-              (click)="onSelect(option.name)"
-              [ngClass]="{'selected': option.name === selectedOption}" ngDefaultControl>
-        {{option.name}}
+        <button class="btn_select" *ngFor="let experience of optionsExperience"
+              [value]="experience.name"
+              (click)="onSelect(experience.name)"
+              [ngClass]="{'selected': experience.name === selectedOption}" ngDefaultControl>
+        {{experience.name}}
       </button>
     </div>
     Min salary

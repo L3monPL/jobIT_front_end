@@ -7,7 +7,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
 })
 export class GlobalSearchComponent implements OnInit {
 
-  options = [
+  optionsExperience = [
     {
       name: 'All'
     },
@@ -64,7 +64,7 @@ export class GlobalSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedOption = this.options[0].name
+    this.selectedOption = this.optionsExperience[0].name
   }
 
   onSelect(option:string){
