@@ -28,7 +28,7 @@
     outline: none !important;
     border:none;
     // box-shadow: 0 0 4px #719ECE;
-    background-color: #464646;  
+    background-color: #3F3F3F;  
     transition: 0.5s;
 }
 .component mat-icon {
@@ -59,7 +59,7 @@
     cursor: pointer;
 }
 .btn_select:hover{
-
+    background-color:  #3F3F3F;
 }
 .selected{
     // border: 1px solid #f06292!important;
