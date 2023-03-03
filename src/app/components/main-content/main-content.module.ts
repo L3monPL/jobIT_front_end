@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './main-content.component';
 import { GlobalSearchModule } from '../global-search/global-search.module';
 import { ListContentModule } from '../list-content/list-content.module';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ListContentModule } from '../list-content/list-content.module';
   imports: [
     CommonModule,
     GlobalSearchModule,
-    ListContentModule
+    ListContentModule,
+    MatIconModule
   ],
   exports: [
     MainContentComponent
