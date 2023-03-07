@@ -63,10 +63,10 @@
 }
 .selected{
     // border: 1px solid #f06292!important;
-    color: #f06292;
+    color: #f8ab53;
 }
 .selectedColor{
-    color: #f06292!important;
+    color: #f8ab53!important;
 }
 .element{
     display: flex;
@@ -86,7 +86,7 @@ input[type=range] {
     appearance: none;
     width: 14px; /* szerokość kursor */
     height: 14px; /* wysokość kursor */
-    background: #f06292; /* kolor kursor */
+    background: #f8ab53; /* kolor kursor */
     cursor: pointer; /* zmiana kursora na "dłoń" */
     border-radius: 50%; /* zaokrąglenie kursor */
   }
