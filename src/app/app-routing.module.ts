@@ -7,22 +7,7 @@ import { AppPageModule } from './pages/app-page/app-page.module';
 // const routes: Routes = [
 //   {
 //     path: '',
-//     component: AppComponent,
-//     // children: [
-//     //   {
-//     //     path: 'login',
-//     //     component: LoginComponent,
-//     //   },
-//     //   {
-//     //     path: 'remind-password',
-//     //     component: RemindPasswordComponent,
-//     //   },
-//     //   {
-//     //     path: 'register',
-//     //     component: RegisterComponent,
-//     //   },
-//     // ]},
-
+//     component: AppComponent
 //   },
 //   // { path: '**',   redirectTo: '/login', pathMatch: 'full' },
 // ];

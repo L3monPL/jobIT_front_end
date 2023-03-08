@@ -19,10 +19,6 @@ const routes: Routes = [
         path: 'login',
         component: LoginComponent,
       },
-    //   {
-    //     path: 'remind-password',
-    //     component: RemindPasswordComponent,
-    //   },
       {
         path: 'register',
         component: RegisterComponent,
@@ -30,7 +26,7 @@ const routes: Routes = [
     // ]},
   },
   
-  { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
+  // { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ];
 
 

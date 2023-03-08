@@ -5,13 +5,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 import { SearchNavModule } from 'src/app/components/search-nav/search-nav.module';
 import { MainContentModule } from 'src/app/components/main-content/main-content.module';
+import { RegisterComponent } from 'src/app/components/register/register.component';
 import { MainContentComponent } from 'src/app/components/main-content/main-content.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: AppPageComponent,
+  // },
   {
-    path: '',
-    component: AppPageComponent,
-  }
+    path: 'company',
+    component: MainContentComponent,
+  },
+  {
+    path: 'freelancer',
+    loadChildren: () => import('../freelancer-page/freelancer-page.module').then(m => m.FreelancerPageModule)
+  },
+  { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ]
 
 @NgModule({
