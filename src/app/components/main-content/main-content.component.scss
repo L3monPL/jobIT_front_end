@@ -53,63 +53,6 @@ h2{
     color: #fff;
     text-align: center;
 }
-.inputbox{
-    position: relative;
-    margin: 30px 0;
-    width: 410px;
-    border-bottom: 2px solid #fff;
-}
-.inputbox label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 1em;
-    pointer-events: none;
-    transition: .5s;
-}
-input:focus ~ label,
-input:valid ~ label{
-top: -5px;
-}
-.inputbox input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    padding:0 35px 0 5px;
-    color: #fff;
-}
-.inputbox mat-icon{
-    display: flex;
-    position: absolute;
-    right: 8px;
-    color: #fff;
-    // font-size: 1.2em;
-    top: 20px;
-}
-.forget{
-    margin: -15px 0 15px ;
-    font-size: .9em;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;  
-}
-
-.forget label input{
-    margin-right: 3px;
-    
-}
-.forget label a{
-    color: #fff;
-    text-decoration: none;
-}
-.forget label a:hover{
-    text-decoration: underline;
-}
 button{
     width: 100%;
     height: 40px;
@@ -137,3 +80,45 @@ button{
     text-decoration: underline;
 }
 ////////////////////////////////////////////////////////////////
+.inputForm{
+    background-color: #ffffff;
+    padding: 12px 50px;
+    // width: 300px;
+    // max-width: 100%;
+    width: 240px;
+    border-radius: 18px;
+    // font-family: Verdana, Geneva, sans-serif;
+    border-width: 1px;
+    border-style:none;
+    border-color: none!important;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left 8px!important;
+    // font-size: 14px;
+    transition: 0.5s;
+}
+.inputForm:focus {
+    outline: none !important;
+    border:none;
+    // box-shadow: 0 0 4px #719ECE;
+    // background-color: #464646;  
+}
+.inputForm:hover {
+    outline: none !important;
+    border:none;
+    // box-shadow: 0 0 4px #719ECE;
+    background-color: #ffffff;  
+    transition: 0.5s;
+}
+.input_row mat-icon {
+    position: absolute;
+    font-size: 22px;
+    padding-top: 9px;
+    padding-left: 12px;
+    color: #202020; 
+}
+.inputs_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
