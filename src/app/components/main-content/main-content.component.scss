@@ -20,15 +20,26 @@ app-list-content{
     width: 60%;
 }
 
-app-login{
+// app-login{
+//     margin-top: 1rem;
+//     // height: calc(100vh - 8.9rem);
+//     background-color: #202020;
+//     width: 40%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 6px;
+// }
+.router{
+    width: 40%;
     margin-top: 1rem;
     // height: calc(100vh - 8.9rem);
     background-color: #202020;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    // justify-content: center;
+    // align-items: center;
     border-radius: 6px;
 }
+
 
 ////////////////////////////////////////////////////////////////

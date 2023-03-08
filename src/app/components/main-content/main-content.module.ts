@@ -7,28 +7,30 @@ import {MatIconModule} from '@angular/material/icon';
 import { LoginModule } from '../login/login.module';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
+import { RegisterComponent } from '../register/register.component';
+import { SearchNavModule } from '../search-nav/search-nav.module';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginComponent,
-    // children: [
-    //   {
-    //     path: 'login',
-    //     component: LoginComponent,
-    //   },
+    path: 'company',
+    component: MainContentComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
     //   {
     //     path: 'remind-password',
     //     component: RemindPasswordComponent,
     //   },
-    //   {
-    //     path: 'register',
-    //     component: RegisterComponent,
-    //   },
+      {
+        path: 'register',
+        component: RegisterComponent,
+      },]
     // ]},
   },
   
-  { path: '**',   redirectTo: '', pathMatch: 'full' },
+  { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ];
 
 
@@ -42,7 +44,8 @@ const routes: Routes = [
     ListContentModule,
     MatIconModule,
     LoginModule,
-    RouterModule.forRoot(routes),
+    SearchNavModule,
+    RouterModule.forChild(routes),
   ],
   exports: [
     MainContentComponent

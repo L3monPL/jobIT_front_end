@@ -1,9 +1,9 @@
 .form-box{
     position: relative;
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 8.9rem);
 }
 h2{
     font-size: 2.4em;
