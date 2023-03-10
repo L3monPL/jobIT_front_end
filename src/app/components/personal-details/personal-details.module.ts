@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
-import { MatIconModule } from '@angular/material/icon';
+import { PersonalDetailsComponent } from './personal-details.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: PersonalDetailsComponent
   },
 ];
 
 @NgModule({
   declarations: [
-    LoginComponent
+    PersonalDetailsComponent
   ],
   imports: [
     CommonModule,
-    MatIconModule,
     RouterModule.forChild(routes),
   ],
   exports: [
-    LoginComponent
+    PersonalDetailsComponent
   ]
 })
-export class LoginModule { }
+export class PersonalDetailsModule { }

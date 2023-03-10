@@ -16,16 +16,19 @@ const routes: Routes = [
     component: MainContentComponent,
     children: [
       {
+        path: '',
+        loadChildren: () => import('../personal-details/personal-details.module').then(m => m.PersonalDetailsModule)
+      },
+      {
         path: 'login',
-        component: LoginComponent,
+        loadChildren: () => import('../login/login.module').then(m => m.LoginModule)
       },
       {
         path: 'register',
-        component: RegisterComponent,
-      },]
-    // ]},
+        loadChildren: () => import('../register/register.module').then(m => m.RegisterModule)
+      }
+    ]
   },
-  
   // { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ];
 
@@ -39,7 +42,6 @@ const routes: Routes = [
     GlobalSearchModule,
     ListContentModule,
     MatIconModule,
-    LoginModule,
     SearchNavModule,
     RouterModule.forChild(routes),
   ],
