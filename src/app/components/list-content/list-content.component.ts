@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-content',
@@ -116,18 +117,19 @@ export class ListContentComponent implements OnInit {
   currentClicableItemLocationID?: number
   menuClicked = false
 
-  constructor(){ 
-
-  }
+  constructor(
+    private router: Router
+  ){ }
 
   ngOnInit(): void {
 
   }
 
-  selectItemOnList(){
+  selectItemOnList(id: number){
     //ten if zabezpiecza przed odkliknięciem z menu kontekstowego na element z listy
     if (this.isOpenMenuLocalization == false) {
       console.log("clicked at element on list") 
+      this.router.navigateByUrl(`/company/${id}`)
     }
   }
 

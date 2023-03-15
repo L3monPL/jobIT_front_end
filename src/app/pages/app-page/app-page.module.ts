@@ -16,6 +16,24 @@ const routes: Routes = [
   {
     path: 'company',
     component: MainContentComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../../components/personal-details/personal-details.module').then(m => m.PersonalDetailsModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../../components/login/login.module').then(m => m.LoginModule)
+      },
+      {
+        path: 'register',
+        loadChildren: () => import('../../components/register/register.module').then(m => m.RegisterModule)
+      }
+    ]
+  },
+  {
+    path: 'company/:id',
+    loadChildren: () => import('../../components/company-selected-offer/company-selected-offer.module').then(m => m.CompanySelectedOfferModule)
   },
   {
     path: 'freelancer',

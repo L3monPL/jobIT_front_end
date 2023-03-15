@@ -1,7 +1,7 @@
 <!-- <div class="selection_container"> -->
     <div class="main_content">
         <div class="item_card_list">
-            <div *ngFor="let item of itemList" (click)="selectItemOnList()" class="item_card container_list_menu">
+            <div *ngFor="let item of itemList" (click)="selectItemOnList(item.id)" class="item_card container_list_menu">
                 <div class="image"></div>
                 <div class="content_card">
                     <div class="left_card">
