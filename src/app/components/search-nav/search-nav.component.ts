@@ -1,9 +1,25 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search-nav',
   templateUrl: './search-nav.component.html',
-  styleUrls: ['./search-nav.component.scss']
+  styleUrls: ['./search-nav.component.scss'],
+  animations: [
+    trigger('join', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(200, style({
+          transform: 'scale(0.95)',
+          opacity: 1
+        })),
+        animate(100, style({
+          transform: 'scale(1)',
+          opacity: 1
+        }))
+      ])
+    ])
+  ]
 })
 export class SearchNavComponent implements OnInit {
 

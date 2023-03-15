@@ -1,10 +1,24 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-content',
   templateUrl: './list-content.component.html',
-  styleUrls: ['./list-content.component.scss']
+  styleUrls: ['./list-content.component.scss'],
+  // animations: [
+  //   trigger('selectItem', [
+  //     transition('* => *', [
+  //       animate(200, style({
+  //         transform: 'scale(0.99)'
+  //       })),
+  //       animate(100, style({
+  //         transform: 'scale(1)',
+  //         opacity: 0.75
+  //       }))
+  //     ])
+  //   ])
+  // ]
 })
 export class ListContentComponent implements OnInit {
 
