@@ -125,3 +125,10 @@
 .item_card{
     cursor: pointer;
 }
+////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-width: 800px){
+    .content_card{
+        display: none;
+    }
+}

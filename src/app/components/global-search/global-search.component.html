@@ -12,7 +12,9 @@
         {{experience.name}}
       </button>
     </div>
-    Min salary
+    <div class="info_salary">
+        Min salary
+    </div>
     <div class="range-slider">
             <input type="range" [(ngModel)]="salary" min="0" max="80000" (input)="updateSalary($event)">    
     </div>

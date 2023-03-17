@@ -53,3 +53,13 @@
     background-color: #fdaa4c;
     transition: 0.5s;
 }
+//////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-width: 800px){
+    .employees{
+        display: none;
+    }
+    .companies{
+        display: none;
+    }
+}

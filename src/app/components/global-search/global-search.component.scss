@@ -141,3 +141,40 @@ input[type=range] {
 .items_menu .btn_select{
     background-color: #3f3f3f;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-width: 1300px){
+    .range-slider{
+        display: none;
+    }
+    .info_salary{
+        display: none;
+    }
+    .localization{
+        display: none;
+    }
+}
+@media only screen and (max-width: 800px){
+    .select_btns{
+        display: none;
+    }
+    .btn_search_container{
+        width: 100%;
+    }
+    .btn_search{
+        background-color: #202020;
+        padding: 8px 0px;
+        border-radius: 18px;
+        font-family: Verdana, Geneva, sans-serif;
+        border-width: 1px;
+        border-style:none;
+        border-color: none!important;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: left 8px!important;
+        font-size: 14px;
+        transition: 0s;
+        width: calc(100% - 40px);
+        padding-left: 40px;
+    }
+}

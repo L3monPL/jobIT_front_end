@@ -43,3 +43,11 @@ app-list-content{
 
 
 ////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 1300px){
+    .router{
+        display: none;
+    }
+    app-list-content{
+        width: 100%;
+    }
+}

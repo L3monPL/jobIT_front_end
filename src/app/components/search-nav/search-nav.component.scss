@@ -71,6 +71,23 @@
     margin-right: 8px;
     margin-bottom: 1rem;
 }
+///////////////////////////////////////////////////////////////////////////
 
+@media only screen and (max-width: 800px){
+    .btn_down{
+        margin-left: 8px;
+    }
+    .btn_up{
+        margin-left: 8px;
+    }
+    .nav{
+        margin-left: 8px;
+        margin-right: 0px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        // height: 300px;
+        // overflow: hidden;
+    }
+}
 
 
