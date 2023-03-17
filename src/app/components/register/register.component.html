@@ -1,1 +1,27 @@
-<p>register works!</p>
+<div *ngIf="registerShow" [@joinRegister]="registerShow" class="form-box">
+    <form>
+        <h2>Register</h2>
+        <div class="inputs_container">
+            <div class="input_row">
+                <mat-icon fontIcon="person"></mat-icon>
+                <input class="inputForm" type="text" placeholder="" required>
+            </div>
+            <div class="input_row">
+                <mat-icon fontIcon="mail"></mat-icon>
+                <input class="inputForm" type="text" required>
+            </div>
+            <div class="input_row">
+                <mat-icon fontIcon="vpn_key"></mat-icon>
+                <input class="inputForm" type="password" required>
+            </div>
+            <div class="input_row">
+                <mat-icon fontIcon="vpn_key"></mat-icon>
+                <input class="inputForm" type="password" required>
+            </div>
+        </div>
+        <button>Register</button>
+        <div class="register">
+            <p (click)="linkLogin()" class="register_btn">Go back to <a>Login</a></p>
+        </div>
+    </form>
+</div>

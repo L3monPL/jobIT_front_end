@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    MatIconModule,
     RouterModule.forChild(routes),
   ],
   exports: [

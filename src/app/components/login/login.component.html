@@ -1,4 +1,4 @@
-<div class="form-box">
+<div *ngIf="loginShow" [@joinLogin]="loginShow" class="form-box">
     <form>
         <h2>Login</h2>
         <div class="inputs_container">
@@ -16,5 +16,4 @@
             <p (click)="linkRegister()" class="register_btn">Don't have an account <a>Register</a></p>
         </div>
     </form>
-    <!-- login form here -->
 </div>
