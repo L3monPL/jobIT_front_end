@@ -2,6 +2,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserDataService } from 'src/app/services/global-services/user-data.service';
+import { Freelancer } from 'src/app/services/user-rest.service';
 
 @Component({
   selector: 'app-login',
@@ -37,8 +39,18 @@ export class LoginComponent implements OnInit {
 
   loginShow = true
 
+  fakeUser: Freelancer = {
+    id: 0,
+    name: "Tomasz",
+    surname: "Kowalski",
+    email: "testowy@freelancer.com",
+    role: 'admin',
+    created_at: '17.03.2023'
+  }
+
   constructor(
-    private router: Router
+    private router: Router,
+    private userData: UserDataService
   ){}
 
   ngOnInit(): void {
@@ -57,6 +69,12 @@ export class LoginComponent implements OnInit {
 
     if (this.loginForm.valid) {
       
+      if (email == 'testowy@freelancer.com') {
+        if (password == 'admin123') {
+          this.userData.setFreelancer(this.fakeUser)   
+          this.router.navigateByUrl('/company')
+        }
+      }
     }
   }
 
