@@ -8,12 +8,19 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   animations: [
     trigger('join', [
       transition(':enter', [
-        style({ opacity: 0 }),
+        style({ 
+          opacity: 0,
+          transform: 'scale(1) translateX(-100%)',
+        }),
+        animate(300, style({
+          opacity: 1,
+          transform: 'translateX(0px)',
+        })),
         animate(200, style({
           transform: 'scale(0.95)',
           opacity: 1
         })),
-        animate(100, style({
+        animate(200, style({
           transform: 'scale(1)',
           opacity: 1
         }))
