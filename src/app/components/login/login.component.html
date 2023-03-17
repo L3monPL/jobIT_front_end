@@ -1,17 +1,17 @@
-<div *ngIf="loginShow" [@joinLogin]="loginShow" class="form-box">
-    <form>
+<div *ngIf="loginShow" [@joinLogin]="loginShow" (submit)="login()" class="form-box">
+    <form [formGroup]="loginForm">
         <h2>Login</h2>
         <div class="inputs_container">
             <div class="input_row">
                 <mat-icon fontIcon="mail"></mat-icon>
-                <input class="inputForm" type="text" required>
+                <input formControlName="email" class="inputForm" type="text" required>
             </div>
             <div class="input_row">
                 <mat-icon fontIcon="vpn_key"></mat-icon>
-                <input class="inputForm" type="password" required>
+                <input formControlName="password" class="inputForm" type="password" required>
             </div>
         </div>
-        <button>Log in</button>
+        <button type="submit">Log in</button>
         <div class="register">
             <p (click)="linkRegister()" class="register_btn">Don't have an account <a>Register</a></p>
         </div>

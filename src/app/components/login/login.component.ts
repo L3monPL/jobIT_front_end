@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -29,6 +30,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  loginForm = new FormGroup({
+    email: new FormControl<string>('',[Validators.required, Validators.email]),
+    password: new FormControl<string>('',Validators.required)
+  });
+
   loginShow = true
 
   constructor(
@@ -42,6 +48,16 @@ export class LoginComponent implements OnInit {
   linkRegister(){
     this.loginShow = !this.loginShow
     setTimeout(() => { this.router.navigateByUrl('/company/register') }, 300)
+  }
+
+  login(){
+
+    let email = this.loginForm.get('email')!.value
+    let password = this.loginForm.get('password')!.value
+
+    if (this.loginForm.valid) {
+      
+    }
   }
 
 }
