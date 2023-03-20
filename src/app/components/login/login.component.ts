@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-
+    this.userData.setFreelancer(this.fakeUser) //to delete
   }
 
   linkRegister(){
@@ -76,6 +76,7 @@ export class LoginComponent implements OnInit {
         }
       }
     }
+    this.router.navigateByUrl('/company') //to delete
   }
 
 }

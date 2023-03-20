@@ -1,1 +1,32 @@
-<p>Welcome back {{this.userData.getUser()?.name}} {{this.userData.getUser()?.surname}}</p>
+<div class="pages">
+    <h3>Welcome back {{this.userData.getUser()?.name}} {{this.userData.getUser()?.surname}}</h3>
+
+    <p>Your profile is complete at 0%</p>
+
+    <div class="items_container">
+        <div class="item">
+            <h3>About me!</h3>
+                <textarea
+                    [(ngModel)]="textAboutMe"
+                    class="textarea-inline-control"  
+                    cdkTextareaAutosize>
+                </textarea>
+        </div>
+        <div class="item">
+            <h3>Skills</h3>
+            <div class="item_skills">
+                <p *ngFor="let skill of skills">{{skill.name}}</p>
+            </div>
+        </div>
+        <div class="item">
+            <h3>Experience</h3>
+                <textarea
+                    [(ngModel)]="textAboutMe"
+                    class="textarea-inline-control"  
+                    cdkTextareaAutosize>
+                </textarea>
+        </div>
+    </div>
+</div>
+
+
