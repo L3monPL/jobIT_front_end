@@ -4,6 +4,7 @@ import { PersonalDetailsComponent } from './personal-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FormsModule,
-    TextFieldModule
+    TextFieldModule,
+    MatIconModule
   ],
   exports: [
     PersonalDetailsComponent

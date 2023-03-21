@@ -1,3 +1,4 @@
+@import './style/colors.scss';
 .selection_container{
     display: flex;
     flex-direction: column;
@@ -28,7 +29,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    margin: 0.7rem;
+    margin: 1rem;
     width: 100%;
     overflow-y: auto;
 }
@@ -77,7 +78,7 @@
     column-gap: 1rem;
 }
 .item_stack_card{
-    background-color: #f8ab53;
+    background-color: $color_2;
     padding: 0px 8px;
     border-radius: 10px;
 }

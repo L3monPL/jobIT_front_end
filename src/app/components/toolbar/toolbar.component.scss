@@ -1,3 +1,4 @@
+@import './style/colors.scss';
 .toolbar{
     display: flex;
     flex-direction: row;
@@ -46,7 +47,7 @@
     transition: 0.5s;
 }
 .pink{
-    background-color: #f8ab53;
+    background-color: $color_2;
     transition: 0.5s;
 }
 .pink:hover{

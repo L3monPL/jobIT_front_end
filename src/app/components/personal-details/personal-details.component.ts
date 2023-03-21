@@ -50,6 +50,21 @@ If you want to work together, feel free to message me. I will consider every off
     }
   ]
 
+  experiences = [
+    {
+      id: 0,
+      name: 'Senior Front-end Developer',
+      date: '02.02.2022 - obecnie',
+      company: 'Allegro'
+    },
+    {
+      id: 1,
+      name: 'Junior Front-end Developer',
+      date: '09.12.2018 - obecnie',
+      company: 'Webinex'
+    }
+  ]
+
   constructor(
     private router: Router,
     public userData: UserDataService
