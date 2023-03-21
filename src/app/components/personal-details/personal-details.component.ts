@@ -1,3 +1,4 @@
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserDataService } from 'src/app/services/global-services/user-data.service';
@@ -5,7 +6,75 @@ import { UserDataService } from 'src/app/services/global-services/user-data.serv
 @Component({
   selector: 'app-personal-details',
   templateUrl: './personal-details.component.html',
-  styleUrls: ['./personal-details.component.scss']
+  styleUrls: ['./personal-details.component.scss'],
+  animations: [
+    trigger('joinUser', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition(':enter', [
+        animate('1.6s', keyframes([
+          style({opacity: 0}),
+          style({opacity: 0}),
+          style({opacity: 1}),
+          style({opacity: 1}),
+        ]))
+      ])
+    ]),
+    trigger('joinAbout', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition(':enter', [
+        animate('1.9s', keyframes([
+          style({opacity: 0}),
+          style({opacity: 0}),
+          style({opacity: 1}),
+          style({opacity: 1}),
+        ]))
+      ])
+    ]),
+    trigger('joinSkills', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition(':enter', [
+        animate('2.1s', keyframes([
+          style({opacity: 0}),
+          style({opacity: 0}),
+          style({opacity: 1}),
+          style({opacity: 1}),
+        ]))
+      ])
+    ]),
+    trigger('joinContact', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition(':enter', [
+        animate('2.3s', keyframes([
+          style({opacity: 0}),
+          style({opacity: 0}),
+          style({opacity: 1}),
+          style({opacity: 1}),
+        ]))
+      ])
+    ]),
+    trigger('joinExperience', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition(':enter', [
+        animate('2.5s', keyframes([
+          style({opacity: 0}),
+          style({opacity: 0}),
+          style({opacity: 1}),
+          style({opacity: 1}),
+        ]))
+      ])
+    ]),
+
+  ]
 })
 export class PersonalDetailsComponent implements OnInit{
 

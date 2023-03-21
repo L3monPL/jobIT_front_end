@@ -1,7 +1,7 @@
 <div class="pages">
     <div class="main_content">
         <div class="user_conatiner">
-            <div class="left">
+            <div [@joinUser] class="left">
                 <div class="user_image">
                     <img src="../../../assets/user_default.jpg" alt="">
                 </div>
@@ -18,7 +18,7 @@
         </div>
     
         <div class="items_container">
-            <div class="item">
+            <div [@joinAbout] class="item">
                 <h3>About me!</h3>
                     <!-- <textarea
                         [(ngModel)]="textAboutMe"
@@ -30,7 +30,7 @@
                     <mat-icon fontIcon="edit"></mat-icon>
                 </div>
             </div>
-            <div class="item">
+            <div [@joinSkills] class="item">
                 <h3>Skills</h3>
                 <div class="item_skills">
                     <p *ngFor="let skill of skills">{{skill.name}}</p>
@@ -39,7 +39,7 @@
                     <mat-icon fontIcon="edit"></mat-icon>
                 </div>
             </div>
-            <div class="item">
+            <div [@joinContact] class="item">
                 <h3>Public email to contact!</h3>
                     <!-- <textarea
                         [(ngModel)]="textAboutMe"
@@ -54,7 +54,7 @@
                     <mat-icon fontIcon="edit"></mat-icon>
                 </div>
             </div>
-            <div class="item">
+            <div [@joinExperience] class="item">
                 <h3>Experience</h3>
                 <div class="experience_container">
                     <div *ngFor="let experience of experiences" class="item_experience">
