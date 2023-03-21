@@ -1,11 +1,16 @@
 @import './style/colors.scss';
 .pages{
-    margin: 1rem;
+    // margin: 3rem;
+    overflow: auto;
+    height: calc(100vh - 8.9rem);
+}
+.main_content{
+    margin: 3rem;
 }
 .items_container{
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    // row-gap: 1rem;
 }
 .items_container h3{
     color: $color_2;
@@ -15,7 +20,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    border: 1px solid #999999;
+    // border: 1px solid #999999;
     padding: 1rem;
 } 
 textarea{
@@ -121,7 +126,7 @@ textarea{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 .user_conatiner .left{
     display: flex;
