@@ -140,3 +140,12 @@ textarea{
     flex-direction: column;
     justify-content: center;
 }
+
+.edit{
+    display: none;
+    transition: 2.5s;
+}
+.item:hover .edit{
+    display: flex;
+    transition: 2.5s;
+}
