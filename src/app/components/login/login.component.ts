@@ -39,22 +39,13 @@ export class LoginComponent implements OnInit {
 
   loginShow = true
 
-  fakeUser: Freelancer = {
-    id: 0,
-    name: "Tomasz",
-    surname: "Kowalski",
-    email: "testowy@freelancer.com",
-    role: 'admin',
-    created_at: '17.03.2023'
-  }
-
   constructor(
     private router: Router,
     private userData: UserDataService
   ){}
 
   ngOnInit(): void {
-    this.userData.setFreelancer(this.fakeUser) //to delete
+    
   }
 
   linkRegister(){
@@ -71,7 +62,7 @@ export class LoginComponent implements OnInit {
       
       if (email == 'testowy@freelancer.com') {
         if (password == 'admin123') {
-          this.userData.setFreelancer(this.fakeUser)   
+          this.userData.setFreelancerFake()   
           this.router.navigateByUrl('/company')
         }
       }
