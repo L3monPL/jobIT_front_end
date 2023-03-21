@@ -4,14 +4,17 @@
         <span class="title">getJOBit.com</span>
     </div>
     <div class="left">
-        <div class="btn employees">
-            Employees
+        <div (click)="freelancer()" class="btn employees">
+            Freelancers
         </div>
-        <div class="btn companies">
+        <div (click)="company()" class="btn companies">
             Companies
         </div>
-        <div class="btn pink">
+        <div *ngIf="!this.userData.getUser()" (click)="login()" class="btn pink">
             Sign in
+        </div>
+        <div *ngIf="this.userData.getUser()" (click)="logout()" class="btn pink">
+            Logout
         </div>
     </div>
     

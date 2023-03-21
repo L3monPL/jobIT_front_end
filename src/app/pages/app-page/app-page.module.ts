@@ -29,7 +29,6 @@ const routes: Routes = [
         path: 'register',
         loadChildren: () => import('../../components/register/register.module').then(m => m.RegisterModule)
       },
-      { path: '**',   redirectTo: '', pathMatch: 'full' }
     ]
   },
   {

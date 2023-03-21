@@ -8,66 +8,15 @@ import { UserDataService } from 'src/app/services/global-services/user-data.serv
   templateUrl: './personal-details.component.html',
   styleUrls: ['./personal-details.component.scss'],
   animations: [
-    trigger('joinUser', [
+    trigger('showElement', [
       state('void', style({
         opacity: 0
       })),
       transition(':enter', [
-        animate('1.6s', keyframes([
+        animate('1s', keyframes([
           style({opacity: 0}),
           style({opacity: 0}),
           style({opacity: 1}),
-          style({opacity: 1}),
-        ]))
-      ])
-    ]),
-    trigger('joinAbout', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition(':enter', [
-        animate('1.9s', keyframes([
-          style({opacity: 0}),
-          style({opacity: 0}),
-          style({opacity: 1}),
-          style({opacity: 1}),
-        ]))
-      ])
-    ]),
-    trigger('joinSkills', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition(':enter', [
-        animate('2.1s', keyframes([
-          style({opacity: 0}),
-          style({opacity: 0}),
-          style({opacity: 1}),
-          style({opacity: 1}),
-        ]))
-      ])
-    ]),
-    trigger('joinContact', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition(':enter', [
-        animate('2.3s', keyframes([
-          style({opacity: 0}),
-          style({opacity: 0}),
-          style({opacity: 1}),
-          style({opacity: 1}),
-        ]))
-      ])
-    ]),
-    trigger('joinExperience', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition(':enter', [
-        animate('2.5s', keyframes([
-          style({opacity: 0}),
-          style({opacity: 0}),
           style({opacity: 1}),
           style({opacity: 1}),
         ]))
@@ -129,7 +78,7 @@ If you want to work together, feel free to message me. I will consider every off
     {
       id: 1,
       name: 'Junior Front-end Developer',
-      date: '09.12.2018 - obecnie',
+      date: '09.12.2018 - 01.02.2022',
       company: 'Webinex'
     }
   ]
