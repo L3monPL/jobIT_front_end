@@ -7,6 +7,8 @@ import { SearchNavModule } from 'src/app/components/search-nav/search-nav.module
 import { MainContentModule } from 'src/app/components/main-content/main-content.module';
 import { RegisterComponent } from 'src/app/components/register/register.component';
 import { MainContentComponent } from 'src/app/components/main-content/main-content.component';
+import { PersonalDetailsModule } from '../../components/personal-details/personal-details.module';
+import { PersonalDetailsComponent } from 'src/app/components/personal-details/personal-details.component';
 
 const routes: Routes = [
   // {
@@ -19,7 +21,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('../../components/personal-details/personal-details.module').then(m => m.PersonalDetailsModule)
+        component: PersonalDetailsComponent
+        // loadChildren: () => import('../../components/personal-details/personal-details.module').then(m => m.PersonalDetailsModule)
       },
       {
         path: 'login',
@@ -50,7 +53,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
     SearchNavModule,
-    MainContentModule
+    MainContentModule,
+    PersonalDetailsModule
   ],
   exports: [
     AppPageComponent,

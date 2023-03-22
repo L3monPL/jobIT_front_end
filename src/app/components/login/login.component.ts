@@ -58,6 +58,8 @@ export class LoginComponent implements OnInit {
     let email = this.loginForm.get('email')!.value
     let password = this.loginForm.get('password')!.value
 
+    this.userData.setFreelancerFake()  //to delete
+
     if (this.loginForm.valid) {
       
       if (email == 'testowy@freelancer.com') {

@@ -89,9 +89,9 @@ If you want to work together, feel free to message me. I will consider every off
   ){ }
 
   ngOnInit(): void {
-    this.userData.setFreelancerFake()  //to delete
+    // this.userData.setFreelancerFake()  //to delete
     if (!this.userData.getUser()) {
-      // this.router.navigateByUrl('/company/login') //to uncoment
+      this.router.navigateByUrl('/company/login') //to uncoment
     }
   }
 
