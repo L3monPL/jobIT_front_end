@@ -45,6 +45,9 @@ export class LoginComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
+    if (this.userData.user) {
+      this.router.navigateByUrl('/company')
+    }
     
   }
 

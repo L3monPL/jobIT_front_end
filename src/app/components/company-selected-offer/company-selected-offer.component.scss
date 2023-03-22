@@ -1,3 +1,4 @@
+@import './style/colors.scss';
 .page{
     display: flex;
     flex-direction: column;
@@ -14,11 +15,11 @@
     margin-top: 1rem;
     background-color: #202020;
     border-radius: 6px;
+    padding: 1rem;
 }
 .router{
     width: 40%;
     margin-top: 1rem;
-    // height: calc(100vh - 8.9rem);
     background-color: #202020;
     display: block;
     // justify-content: center;
@@ -27,4 +28,60 @@
 }
 .bar_33px_height{
     height: 33px;
+}
+.header{
+    position: relative;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    height: 120px;
+    background-color: #3B3D42;
+    
+
+}
+.content_company_bg{
+    // height: auto;
+    background-color: #2c2c2c;
+    overflow-y: auto;
+    height: 500px;
+    height: calc(100vh - 18.4rem);
+    // padding-top: 2rem;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.margin_content{
+    margin: 2rem;
+}
+.image{
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    background-color: #fff;
+    width: 130px;
+    height: 90px;
+    border-radius: 10px;
+}
+.header .title{
+    margin-left: 190px;
+    padding-top: 2.8rem;
+    font-size: 1.2rem;
+}
+.back_btn{
+    margin-left: 12px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+.stack_container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+.stack{
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.title_stack{
+    color: $color_2;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
