@@ -38,8 +38,6 @@
     border-top-left-radius: 6px;
     height: 120px;
     background-color: #3B3D42;
-    
-
 }
 .content_company_bg{
     // height: auto;
@@ -50,6 +48,9 @@
     // padding-top: 2rem;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
+}
+.content_company_bg::-webkit-scrollbar {
+    display: none;
 }
 .margin_content{
     margin: 2rem;
@@ -98,7 +99,7 @@
     border-radius: 6px;
     border: 1px solid #ccc;
 }
-.title_stack{
+.title_selection{
     color: $color_2;
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -128,4 +129,22 @@
     display: flex;
     flex-direction: row;
     column-gap: 0.5rem;
+}
+.item ul{
+    padding-inline-start: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.container_list li {
+    list-style: none;
+    // font-size: 20px;
+}
+
+.container_list li:before {
+    content:"·";
+    font-size:60px;
+    margin-right: 8px;
+    vertical-align:middle;
+    line-height:20px;
+    color: $color_3;
 }
