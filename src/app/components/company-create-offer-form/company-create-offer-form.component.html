@@ -8,4 +8,21 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
+    <div class="item">
+        <h3>Wynagrodzenie</h3>
+        <div class="salary_row">
+            <input [(ngModel)]="managerCompanyOffer.fromSalaryForm" type="number">
+            <div class="space"> - </div>
+            <input [(ngModel)]="managerCompanyOffer.toSalaryForm" type="number">
+            <div class="price">PLN</div>
+        </div>
+    </div>
+    <div class="item">
+        <h3>Poziom zaawansowania</h3>
+        <select [(ngModel)]="managerCompanyOffer.expForm">
+            <option [value]=1>Junior</option>
+            <option [value]=2>Mid</option>
+            <option [value]=3>Senior</option>
+        </select>
+    </div>
 </div>

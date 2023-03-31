@@ -22,14 +22,25 @@
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">
-                                <div class="salary">6 500 - 7 500</div>
+                                <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary">{{managerCompanyOffer.fromSalaryForm}} - {{managerCompanyOffer.toSalaryForm}}</div>
+                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary">0000</div>
                                 <div class="salary value_salary">PLN</div>
                             </div>
                             <div class="exp_container">
-                                <div class="exp">Junior</div>
-                                <mat-icon class="star" fontIcon="star"></mat-icon>
-                                <mat-icon class="star" fontIcon="star_outline"></mat-icon>
-                                <mat-icon class="star" fontIcon="star_outline"></mat-icon>
+                                <div *ngIf="managerCompanyOffer.expForm == 1" class="exp">Junior</div>
+                                <div *ngIf="managerCompanyOffer.expForm == 2" class="exp">Mid</div>
+                                <div *ngIf="managerCompanyOffer.expForm == 3" class="exp">Senior</div>
+                                <div *ngIf="!managerCompanyOffer.expForm" class="exp">Zaawansowanie</div>
+                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon *ngIf="managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon *ngIf="managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+
+                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2" class="star" fontIcon="star_outline"></mat-icon>
+                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1" class="star" fontIcon="star_outline"></mat-icon>
+
+                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
+                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
+                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
                             </div>
                         </div>
                     </div>
