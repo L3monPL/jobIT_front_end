@@ -13,12 +13,12 @@
 .company_selected_main_content{
     width: 60%;
     margin-top: 1rem;
-    background-color: #202020;
-    border-radius: 6px;
+    // background-color: #202020;
+    // border-radius: 6px;
     // padding: 1rem;
 }
 .margin_content_company{
-    margin: 1rem;
+    // margin: 1rem;
 }
 .router{
     width: 40%;
@@ -44,7 +44,7 @@
     background-color: #2c2c2c;
     overflow-y: auto;
     height: 500px;
-    height: calc(100vh - 18.4rem);
+    height: calc(100vh - 16.4rem);
     // padding-top: 2rem;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -52,7 +52,7 @@
 .content_company_bg::-webkit-scrollbar {
     // display: none;
     width: 6px;
-    background-color: #3b3d42;
+    background-color: #202020;
 }
 .content_company_bg::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
