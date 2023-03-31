@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'freelancer',
     loadChildren: () => import('../freelancer-page/freelancer-page.module').then(m => m.FreelancerPageModule)
   },
+  {
+    path: 'company-offer-create',
+    loadChildren: () => import('../company-create-offer-page/company-create-offer-page.module').then(m => m.CompanyCreateOfferPageModule)
+  },
   { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ]
 

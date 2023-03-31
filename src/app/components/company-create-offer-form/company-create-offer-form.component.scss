@@ -1,0 +1,44 @@
+@import './style/colors.scss';
+.page{
+    margin: 1rem;
+}
+textarea{
+    background-color: #202020;
+    color: #fff;
+    box-sizing: content-box;
+    width: -webkit-fill-available;
+    // min-height: 1.rem;
+}
+.textarea-inline-control {
+    box-sizing: content-box;
+    border-color: transparent;
+    font-size: 1rem;
+    // padding: 7px 7px 8px;
+    // line-height: 1.28;
+    resize: none;
+    box-shadow: transparent 0px 0px 0px 1px;
+    transition: background 0.1s ease 0s;
+    overflow: auto;
+    overflow-y: hidden;  
+    border-radius: 3px;
+    appearance: none;
+    border: 1px solid #fff;
+  
+    &:hover:not(:focus) {  
+      background-color: #202020;
+      color: #fff;
+    }
+  
+    &:focus {
+      color: #fff;
+      background-color: #202020;
+      border: 1px solid #fff;
+      box-shadow: 0 0 0 1px #fff;
+      outline: none;
+    }
+}
+.item h3{
+    color: #e69b46;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}

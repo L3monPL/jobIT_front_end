@@ -13,9 +13,12 @@
                     <div class="image"></div>
                     <div class="title">
                         <div class="name_of_title">  
-                            <div class="offer_title">
-                                Angular Frontend Developer
-                            </div>                     
+                            <div *ngIf="managerCompanyOffer.titleForm" class="offer_title">
+                                {{managerCompanyOffer.titleForm}}
+                            </div> 
+                            <div *ngIf="!managerCompanyOffer.titleForm" class="offer_title">
+                                Tytuł oferty
+                            </div>                    
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">
@@ -108,8 +111,7 @@
         </div>
         <div class="router">
             <!-- <router-outlet></router-outlet> -->
-            <p>info about company</p>
-            <p>list all offers from current company</p>
+            <app-company-create-offer-form></app-company-create-offer-form>
         </div>
     </div>
 </div>
