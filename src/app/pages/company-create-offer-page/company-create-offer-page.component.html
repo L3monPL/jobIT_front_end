@@ -59,7 +59,10 @@
                         </div>
                         <div class="item">
                             <div class="title_selection">Umiejętności</div>
-                            <div class="stack_container">
+                            <div *ngIf="managerCompanyOffer.stackForm[0].name" class="stack_container">
+                                <div *ngFor="let stack of managerCompanyOffer.stackForm; let i = index" class="stack">{{managerCompanyOffer.stackForm[i].name}}</div>
+                            </div>
+                            <div *ngIf="!managerCompanyOffer.stackForm[0].name" class="stack_container">
                                 <div class="stack">HTML</div>
                                 <div class="stack">CSS</div>
                                 <div class="stack">TypeScript</div>

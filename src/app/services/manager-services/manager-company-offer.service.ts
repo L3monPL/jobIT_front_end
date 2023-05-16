@@ -15,10 +15,10 @@ export class ManagerCompanyOfferService {
   aboutForm: string = '';
   receivedText: string = '';
 
-  stackForm?: [
+  stackForm = [
     {
-      id: number,
-      name: string
+      // id: 0,
+      name: ''
     }
   ]
 
@@ -27,6 +27,15 @@ export class ManagerCompanyOfferService {
   onTextChange(){
     this.aboutForm = this.aboutForm.replace(/\r\n|\r|\n/g, '\n');
     this.receivedText = this.aboutForm.replace(/\n/g, '<br>');
-
   }
+
+  addStack(){
+    this.stackForm.push(
+      {
+        // id: this.stackForm.length,
+        name: ''
+      }
+    )
+  }
+
 }

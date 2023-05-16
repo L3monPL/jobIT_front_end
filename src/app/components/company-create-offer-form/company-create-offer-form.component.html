@@ -35,4 +35,13 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
+    <div class="item">
+        <h3>Umiejętności</h3>
+        <div class="skills_column">
+            <div *ngFor="let inputStack of managerCompanyOffer.stackForm; let i = index" class="inputs_container">
+                <input [(ngModel)]="managerCompanyOffer.stackForm[i].name">
+            </div>
+            <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj kolejną umiejętność</button>
+        </div>
+    </div>
 </div>
