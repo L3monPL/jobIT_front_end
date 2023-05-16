@@ -29,6 +29,7 @@
         <h3>Informacje</h3>
         <textarea
             [(ngModel)]='managerCompanyOffer.aboutForm'
+            (input)="managerCompanyOffer.onTextChange()"
             placeholder="Informacje..."
             class="textarea-inline-control"  
             cdkTextareaAutosize>

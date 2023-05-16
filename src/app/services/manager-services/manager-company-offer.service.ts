@@ -13,6 +13,7 @@ export class ManagerCompanyOfferService {
   expForm?: number
 
   aboutForm: string = '';
+  receivedText: string = '';
 
   stackForm?: [
     {
@@ -22,4 +23,10 @@ export class ManagerCompanyOfferService {
   ]
 
   constructor() { }
+
+  onTextChange(){
+    this.aboutForm = this.aboutForm.replace(/\r\n|\r|\n/g, '\n');
+    this.receivedText = this.aboutForm.replace(/\n/g, '<br>');
+
+  }
 }

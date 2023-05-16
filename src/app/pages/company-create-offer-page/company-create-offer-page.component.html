@@ -50,7 +50,7 @@
                         <div class="item">
                             <div class="title_selection">Informacje o ofercie</div>
                             <div *ngIf="managerCompanyOffer.aboutForm" class="info_offer">
-                                {{managerCompanyOffer.aboutForm}}
+                                <div [innerHTML]="managerCompanyOffer.receivedText"></div>
                                 <!-- Dla jednego z naszych klientów z sektora bankowego poszukujemy Fullstack Developera ze znajomością Angular. Obecnie nasze zespoły pracują nad platformą dla bankowości inwestycyjnej oraz nad rozwojem platformy CIB do monitorowania portfela klientów, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
                             </div>
                             <div *ngIf="!managerCompanyOffer.aboutForm" class="info_offer">
