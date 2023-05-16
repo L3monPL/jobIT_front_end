@@ -32,4 +32,8 @@ export class ToolbarComponent {
     this.router.navigateByUrl('/freelancer')
   }
 
+  createCompanyOffer(){
+    this.router.navigateByUrl('/company-offer-create')
+  }
+
 }

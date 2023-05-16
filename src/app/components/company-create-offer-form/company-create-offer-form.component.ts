@@ -12,6 +12,5 @@ export class CompanyCreateOfferFormComponent {
     public managerCompanyOffer: ManagerCompanyOfferService
   ) { }
 
-  title?: string
 
 }

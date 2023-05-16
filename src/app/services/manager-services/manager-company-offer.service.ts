@@ -12,7 +12,7 @@ export class ManagerCompanyOfferService {
 
   expForm?: number
 
-  aboutForm?: string
+  aboutForm: string = '';
 
   stackForm?: [
     {

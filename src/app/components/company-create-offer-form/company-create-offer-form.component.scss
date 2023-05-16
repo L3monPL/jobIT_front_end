@@ -10,8 +10,16 @@ textarea{
     color: #fff;
     box-sizing: content-box;
     width: -webkit-fill-available;
-    // min-height: 1.rem;
+    // min-height: 1rem;
 }
+.info_textarea textarea{
+  background-color: #202020;
+  color: #fff;
+  box-sizing: content-box;
+  width: -webkit-fill-available;
+  min-height: 4.5rem;
+}
+
 .textarea-inline-control {
     padding: 6px 6px;
     box-sizing: content-box;

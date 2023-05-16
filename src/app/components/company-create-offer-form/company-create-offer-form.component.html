@@ -25,4 +25,13 @@
             <option [value]=3>Senior</option>
         </select>
     </div>
+    <div class="item info_textarea">
+        <h3>Informacje</h3>
+        <textarea
+            [(ngModel)]='managerCompanyOffer.aboutForm'
+            placeholder="Informacje..."
+            class="textarea-inline-control"  
+            cdkTextareaAutosize>
+        </textarea>
+    </div>
 </div>
