@@ -17,7 +17,19 @@ export class ManagerCompanyOfferService {
 
   stackForm = [
     {
-      // id: 0,
+      name: ''
+    }
+  ]
+
+  
+  additionalStackForm = [
+    {
+      name: ''
+    }
+  ]
+
+  responsibilitiesForm = [
+    {
       name: ''
     }
   ]
@@ -32,7 +44,22 @@ export class ManagerCompanyOfferService {
   addStack(){
     this.stackForm.push(
       {
-        // id: this.stackForm.length,
+        name: ''
+      }
+    )
+  }
+
+  addAdditionalStack(){
+    this.additionalStackForm.push(
+      {
+        name: ''
+      }
+    )
+  }
+
+  addResponsibilitiesForm(){
+    this.responsibilitiesForm.push(
+      {
         name: ''
       }
     )

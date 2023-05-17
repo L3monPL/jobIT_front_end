@@ -1,9 +1,11 @@
 @import './style/colors.scss';
 .page{
-    margin: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    overflow: auto;
+    height: calc(100vh - 174px);
 }
 textarea{
     background-color: #202020;

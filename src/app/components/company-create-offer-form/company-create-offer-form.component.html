@@ -39,9 +39,27 @@
         <h3>Umiejętności</h3>
         <div class="skills_column">
             <div *ngFor="let inputStack of managerCompanyOffer.stackForm; let i = index" class="inputs_container">
-                <input [(ngModel)]="managerCompanyOffer.stackForm[i].name">
+                <input [(ngModel)]="inputStack.name">
             </div>
             <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj kolejną umiejętność</button>
+        </div>
+    </div>
+    <div class="item">
+        <h3>Warto znać</h3>
+        <div class="skills_column">
+            <div *ngFor="let inputAdditionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="inputs_container">
+                <input [(ngModel)]="inputAdditionalStack.name">
+            </div>
+            <button (click)="managerCompanyOffer.addAdditionalStack()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
+        </div>
+    </div>
+    <div class="item">
+        <h3>Obowiązki</h3>
+        <div class="skills_column">
+            <div *ngFor="let inputResponsibilities of managerCompanyOffer.responsibilitiesForm; let i = index" class="inputs_container">
+                <input [(ngModel)]="inputResponsibilities.name">
+            </div>
+            <button (click)="managerCompanyOffer.addResponsibilitiesForm()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
         </div>
     </div>
 </div>

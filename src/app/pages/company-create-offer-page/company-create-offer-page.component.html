@@ -17,13 +17,14 @@
                                 {{managerCompanyOffer.titleForm}}
                             </div> 
                             <div *ngIf="!managerCompanyOffer.titleForm" class="offer_title">
-                                Nadaj tytuł oferty
+                                ........................
+                                <!-- Nadaj tytuł oferty -->
                             </div>                    
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">
                                 <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary">{{managerCompanyOffer.fromSalaryForm}} - {{managerCompanyOffer.toSalaryForm}}</div>
-                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary">Wynagrodzenie</div>
+                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary">........................</div>
                                 <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary value_salary">PLN</div>
                             </div>
                             <div class="exp_container">
@@ -54,33 +55,52 @@
                                 <!-- Dla jednego z naszych klientów z sektora bankowego poszukujemy Fullstack Developera ze znajomością Angular. Obecnie nasze zespoły pracują nad platformą dla bankowości inwestycyjnej oraz nad rozwojem platformy CIB do monitorowania portfela klientów, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
                             </div>
                             <div *ngIf="!managerCompanyOffer.aboutForm" class="info_offer">
-                                Przykładowy opis jednego z naszych klientów z sektora XYZ poszukującego XYZ Developera ze znajomością XYZ. Obecnie nasze zespoły pracują nad platformą dla XYZ oraz nad rozwojem platformy XYZ do monitorowania XYZ, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś!
+                                ................................
+                                <!-- Przykładowy opis jednego z naszych klientów z sektora XYZ poszukującego XYZ Developera ze znajomością XYZ. Obecnie nasze zespoły pracują nad platformą dla XYZ oraz nad rozwojem platformy XYZ do monitorowania XYZ, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
                             </div>
                         </div>
                         <div class="item">
                             <div class="title_selection">Umiejętności</div>
                             <div *ngIf="managerCompanyOffer.stackForm[0].name" class="stack_container">
-                                <div *ngFor="let stack of managerCompanyOffer.stackForm; let i = index" class="stack">{{managerCompanyOffer.stackForm[i].name}}</div>
+                                <div *ngFor="let stack of managerCompanyOffer.stackForm; let i = index" class="stack">
+                                    {{stack.name}}
+                                </div>
                             </div>
                             <div *ngIf="!managerCompanyOffer.stackForm[0].name" class="stack_container">
-                                <div class="stack">HTML</div>
-                                <div class="stack">CSS</div>
-                                <div class="stack">TypeScript</div>
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <!-- <div class="stack">TypeScript</div>
                                 <div class="stack">Angular</div>
-                                <div class="stack">RWD</div>
+                                <div class="stack">RWD</div> -->
                             </div>
                         </div>
                         <div class="item">
                             <div class="title_selection">Warto znać</div>
-                            <div class="stack_container">
-                                <div class="stack">RxJS</div>
+                            <div *ngIf="managerCompanyOffer.additionalStackForm[0].name" class="stack_container">
+                                <div *ngFor="let additionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="stack">
+                                    {{additionalStack.name}}
+                                </div>
+                            </div>
+                            <div *ngIf="!managerCompanyOffer.additionalStackForm[0].name" class="stack_container">
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <div class="stack">........</div>
+                                <!-- <div class="stack">RxJS</div>
                                 <div class="stack">Jira</div>
-                                <div class="stack">Scrum</div>
+                                <div class="stack">Scrum</div> -->
                             </div>
                         </div>
                         <div class="item">
-                            <div class="title_selection">Your responsibilities</div>
-                            <ul class="container_list">
+                            <div class="title_selection">Twoje obowiązki</div>
+                            <ul *ngIf="managerCompanyOffer.responsibilitiesForm[0].name" class="container_list">
+                                <li *ngFor="let responsibilities of managerCompanyOffer.responsibilitiesForm; let i = index">
+                                    {{responsibilities.name}}
+                                </li>
+                            </ul>
+                            <ul *ngIf="!managerCompanyOffer.responsibilitiesForm[0].name" class="container_list">
                                 <li>
                                     Wspieranie biznesu w przygotowywaniu wymagań na poziomie Analizy Wykonalności.
                                 </li>
