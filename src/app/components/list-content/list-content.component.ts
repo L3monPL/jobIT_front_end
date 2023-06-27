@@ -174,4 +174,12 @@ export class ListContentComponent implements OnInit {
     
   }
 
+  locations(locations: any): Array<string>{
+
+    let array = locations.slice()
+    array.shift()
+
+    return array
+  }
+
 }

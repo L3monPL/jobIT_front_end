@@ -24,8 +24,8 @@
                             <p class="clicable">+{{item.locations.length - 1}} Locations</p>
                             <!-- MENU -->
                             <div #menu *ngIf="this.currentClicableItemLocationID == item.id" [ngClass]="{'openMenuLocalization': isOpenMenuLocalization, 'closedMenuLocalization': !isOpenMenuLocalization}">
-                                <div *ngFor="let location of item.locations; let i = index" class="location_card">
-                                    <p *ngIf="i >= 1">{{location}}</p>
+                                <div *ngFor="let location of locations(item.locations); let i = index" class="location_card">
+                                    <p>{{location}}</p>
                                 </div>
                             </div>
                             <!-- END MENU -->
