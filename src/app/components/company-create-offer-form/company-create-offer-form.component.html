@@ -1,5 +1,5 @@
 <div class="page">
-    <div (click)="titleAdd = !titleAdd" class="item element_add">
+    <div *ngIf="titleAdd" (click)="titleAdd = !titleAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="title"></mat-icon>
             Dodaj tytuł oferty
@@ -8,8 +8,16 @@
             <mat-icon fontIcon="navigate_next"></mat-icon>
         </div>
     </div>
-    <div *ngIf="!titleAdd" class="item">
-        <h3>Tytuł ogłoszenia</h3>
+    <div (click)="$event.stopPropagation()" *ngIf="!titleAdd" class="item inputs_item">
+        <div class="top" (click)="titleAdd = !titleAdd">
+            <div class="left">
+                <mat-icon fontIcon="title"></mat-icon>
+                Dodaj tytuł oferty
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
         <textarea
             [(ngModel)]="managerCompanyOffer.titleForm"
             placeholder="Tytuł..."
@@ -26,8 +34,16 @@
             <mat-icon fontIcon="navigate_next"></mat-icon>
         </div>
     </div>
-    <div *ngIf="!salaryAdd" class="item">
-        <h3>Wynagrodzenie</h3>
+    <div (click)="$event.stopPropagation()" *ngIf="!salaryAdd" class="item inputs_item">
+        <div class="top" (click)="salaryAdd = !salaryAdd">
+            <div class="left">
+                <mat-icon fontIcon="payments"></mat-icon>
+                Dodaj wynagrodzenie
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
         <div class="salary_row">
             <input [(ngModel)]="managerCompanyOffer.fromSalaryForm" type="number">
             <div class="space"> - </div>
@@ -44,9 +60,18 @@
             <mat-icon fontIcon="navigate_next"></mat-icon>
         </div>
     </div>
-    <div *ngIf="!advancedAdd" class="item">
-        <h3>Poziom zaawansowania</h3>
-        <select [(ngModel)]="managerCompanyOffer.expForm">
+    <div (click)="$event.stopPropagation()" *ngIf="!advancedAdd" class="item inputs_item">
+        <div class="top" (click)="advancedAdd = !advancedAdd">
+            <div class="left">
+                <mat-icon fontIcon="star_half"></mat-icon>
+                Ustaw poziom zaawansowania
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
+        <select aria-placeholder="poziom" [(ngModel)]="managerCompanyOffer.expForm">
+            <option [value]="0" disabled selected>Wybierz poziom</option>
             <option [value]=1>Junior</option>
             <option [value]=2>Mid</option>
             <option [value]=3>Senior</option>

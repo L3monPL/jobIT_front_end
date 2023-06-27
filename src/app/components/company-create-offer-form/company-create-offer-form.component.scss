@@ -32,7 +32,7 @@ textarea{
     transition: background 0.1s ease 0s;
     overflow: auto;
     overflow-y: hidden;  
-    border-radius: 3px;
+    border-radius: 6px;
     appearance: none;
     border: 1px solid #fff;
   
@@ -118,7 +118,7 @@ textarea{
     transition: background 0.1s ease 0s;
     overflow: auto;
     overflow-y: hidden;  
-    border-radius: 3px;
+    border-radius: 6px;
     appearance: none;
     border: 1px solid #fff;
   
@@ -176,15 +176,15 @@ select{
     }
 }
 .element_add{
-  border: 1px solid #fff;
+  // border: 1px solid #fff;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
   cursor: pointer;
-  background-color: #FFE7FF;
-  color: #000;
+  background-color: #3b3d42;
+  color: #fff;
 }
 .element_add .left{
   display: flex;
@@ -194,4 +194,34 @@ select{
 .element_add .right{
   display: flex;
   align-items: center;
+}
+.inputs_item{
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #3b3d42;
+  color: #fff;
+}
+.inputs_item .left{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.inputs_item{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.inputs_item .top{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.inputs_item .top .right mat-icon{
+  font-size: 20px;
+  padding-left: 6px;
+  padding-top: 4px;
 }

@@ -10,7 +10,7 @@ export class ManagerCompanyOfferService {
   fromSalaryForm?: number
   toSalaryForm?: number
 
-  expForm?: number
+  expForm: number = 0
 
   aboutForm: string = '';
   receivedText: string = '';
