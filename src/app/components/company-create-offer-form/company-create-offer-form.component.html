@@ -1,5 +1,14 @@
 <div class="page">
-    <div class="item">
+    <div (click)="titleAdd = !titleAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="title"></mat-icon>
+            Dodaj tytuł oferty
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!titleAdd" class="item">
         <h3>Tytuł ogłoszenia</h3>
         <textarea
             [(ngModel)]="managerCompanyOffer.titleForm"
@@ -8,7 +17,16 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
-    <div class="item">
+    <div *ngIf="salaryAdd" (click)="salaryAdd = !salaryAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="payments"></mat-icon>
+            Dodaj wynagrodzenie
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!salaryAdd" class="item">
         <h3>Wynagrodzenie</h3>
         <div class="salary_row">
             <input [(ngModel)]="managerCompanyOffer.fromSalaryForm" type="number">
@@ -17,7 +35,16 @@
             <div class="price">PLN</div>
         </div>
     </div>
-    <div class="item">
+    <div *ngIf="advancedAdd" (click)="advancedAdd = !advancedAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="star_half"></mat-icon>
+            Ustaw poziom zaawansowania
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!advancedAdd" class="item">
         <h3>Poziom zaawansowania</h3>
         <select [(ngModel)]="managerCompanyOffer.expForm">
             <option [value]=1>Junior</option>
@@ -25,7 +52,16 @@
             <option [value]=3>Senior</option>
         </select>
     </div>
-    <div class="item info_textarea">
+    <div *ngIf="infoAdd" (click)="infoAdd = !infoAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="description"></mat-icon>
+            Dodaj szczegółowe informacje
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!infoAdd" class="item info_textarea">
         <h3>Informacje</h3>
         <textarea
             [(ngModel)]='managerCompanyOffer.aboutForm'
@@ -35,7 +71,7 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
-    <div class="item">
+    <!-- <div class="item">
         <h3>Umiejętności</h3>
         <div class="skills_column">
             <div *ngFor="let inputStack of managerCompanyOffer.stackForm; let i = index" class="inputs_container">
@@ -43,8 +79,8 @@
             </div>
             <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj kolejną umiejętność</button>
         </div>
-    </div>
-    <div class="item">
+    </div> -->
+    <!-- <div class="item">
         <h3>Warto znać</h3>
         <div class="skills_column">
             <div *ngFor="let inputAdditionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="inputs_container">
@@ -52,8 +88,8 @@
             </div>
             <button (click)="managerCompanyOffer.addAdditionalStack()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
         </div>
-    </div>
-    <div class="item">
+    </div> -->
+    <!-- <div class="item">
         <h3>Obowiązki</h3>
         <div class="skills_column">
             <div *ngFor="let inputResponsibilities of managerCompanyOffer.responsibilitiesForm; let i = index" class="inputs_container">
@@ -61,5 +97,5 @@
             </div>
             <button (click)="managerCompanyOffer.addResponsibilitiesForm()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
         </div>
-    </div>
+    </div> -->
 </div>

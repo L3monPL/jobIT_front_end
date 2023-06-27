@@ -50,7 +50,7 @@ textarea{
     }
 }
 .item h3{
-    color: #e69b46;
+    color: $color_2;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -175,6 +175,23 @@ select{
       outline: none;
     }
 }
-// select option{
-//     padding: 1rem;
-// }
+.element_add{
+  border: 1px solid #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #FFE7FF;
+  color: #000;
+}
+.element_add .left{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.element_add .right{
+  display: flex;
+  align-items: center;
+}

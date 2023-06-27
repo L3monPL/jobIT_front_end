@@ -8,9 +8,19 @@ import { ManagerCompanyOfferService } from 'src/app/services/manager-services/ma
 })
 export class CompanyCreateOfferFormComponent {
 
+  titleAdd = true
+  salaryAdd = true
+  advancedAdd = true
+  infoAdd = true
+
   constructor(
     public managerCompanyOffer: ManagerCompanyOfferService
   ) { }
+
+  // changeStatus(status: boolean){
+  //   status = !status
+  //   console.log(status)
+  // }
 
 
 }
