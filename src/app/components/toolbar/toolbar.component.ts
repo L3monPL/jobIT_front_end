@@ -14,6 +14,10 @@ export class ToolbarComponent {
     public userData: UserDataService
   ){ }
 
+  home(){
+    this.router.navigateByUrl('/company')
+  }
+
   login(){
     this.router.navigateByUrl('/company/login')
   }

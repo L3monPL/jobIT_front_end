@@ -86,8 +86,16 @@
             <mat-icon fontIcon="navigate_next"></mat-icon>
         </div>
     </div>
-    <div *ngIf="!infoAdd" class="item info_textarea">
-        <h3>Informacje</h3>
+    <div (click)="$event.stopPropagation()" *ngIf="!infoAdd" class="item info_textarea inputs_item">
+        <div class="top" (click)="infoAdd = !infoAdd">
+            <div class="left">
+                <mat-icon fontIcon="description"></mat-icon>
+                Dodaj szczegółowe informacje
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
         <textarea
             [(ngModel)]='managerCompanyOffer.aboutForm'
             (input)="managerCompanyOffer.onTextChange()"
@@ -96,15 +104,34 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
-    <!-- <div class="item">
-        <h3>Umiejętności</h3>
+    <div *ngIf="skillsAdd" (click)="skillsAdd = !skillsAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="description"></mat-icon>
+            Dodaj umiejętności
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!skillsAdd" class="item inputs_item">
+        <div class="top" (click)="skillsAdd = !skillsAdd">
+            <div class="left">
+                <mat-icon fontIcon="description"></mat-icon>
+                Dodaj umiejętności
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
         <div class="skills_column">
             <div *ngFor="let inputStack of managerCompanyOffer.stackForm; let i = index" class="inputs_container">
                 <input [(ngModel)]="inputStack.name">
+                <mat-icon *ngIf="i == 0" fontIcon="block"></mat-icon>
+                <mat-icon *ngIf="i >= 1" (click)="deleteSkill(i)" fontIcon="delete"></mat-icon>
             </div>
             <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj kolejną umiejętność</button>
         </div>
-    </div> -->
+    </div>
     <!-- <div class="item">
         <h3>Warto znać</h3>
         <div class="skills_column">

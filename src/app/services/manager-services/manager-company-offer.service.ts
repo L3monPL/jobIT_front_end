@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 
+export interface StackForm{
+  name: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +19,7 @@ export class ManagerCompanyOfferService {
   aboutForm: string = '';
   receivedText: string = '';
 
-  stackForm = [
+  stackForm: Array<StackForm> = [
     {
       name: ''
     }

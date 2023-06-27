@@ -12,15 +12,16 @@ export class CompanyCreateOfferFormComponent {
   salaryAdd = true
   advancedAdd = true
   infoAdd = true
+  skillsAdd = true
 
   constructor(
     public managerCompanyOffer: ManagerCompanyOfferService
   ) { }
 
-  // changeStatus(status: boolean){
-  //   status = !status
-  //   console.log(status)
-  // }
+  deleteSkill(id: number){
+    this.managerCompanyOffer.stackForm.splice(id, 1)
+    console.log(id)
+  }
 
 
 }
