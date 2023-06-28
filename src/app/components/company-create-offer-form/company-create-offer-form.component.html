@@ -1,4 +1,5 @@
 <div class="page">
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="titleAdd" (click)="titleAdd = !titleAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="title"></mat-icon>
@@ -25,6 +26,7 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="salaryAdd" (click)="salaryAdd = !salaryAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="payments"></mat-icon>
@@ -51,6 +53,7 @@
             <div class="price">PLN</div>
         </div>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="advancedAdd" (click)="advancedAdd = !advancedAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="star_half"></mat-icon>
@@ -77,6 +80,7 @@
             <option [value]=3>Senior</option>
         </select>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="infoAdd" (click)="infoAdd = !infoAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="description"></mat-icon>
@@ -104,6 +108,7 @@
             cdkTextareaAutosize>
         </textarea>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="skillsAdd" (click)="skillsAdd = !skillsAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="school"></mat-icon>
@@ -131,6 +136,7 @@
             <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj umiejętność</button>
         </div>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="additionalSkillsAdd" (click)="additionalSkillsAdd = !additionalSkillsAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="school"></mat-icon>
@@ -158,6 +164,7 @@
             <button (click)="managerCompanyOffer.addAdditionalStack()" class="skills_btn">Dodaj dodatkową umiejętność</button>
         </div>
     </div>
+    <!------------------------------------------------------------------------------------->
     <div *ngIf="responsibilitiesAdd" (click)="responsibilitiesAdd = !responsibilitiesAdd" class="item element_add">
         <div class="left">
             <mat-icon fontIcon="format_list_bulleted"></mat-icon>
@@ -182,7 +189,36 @@
                 <input [(ngModel)]="inputResponsibilities.name">
                 <mat-icon (click)="deleteResponsibilities(i)" fontIcon="delete"></mat-icon>
             </div>
-            <button (click)="managerCompanyOffer.addResponsibilitiesForm()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
+            <button (click)="managerCompanyOffer.addResponsibilitiesForm()" class="skills_btn">Dodaj dodatkową umiejętność</button>
         </div>
     </div>
+    <!------------------------------------------------------------------------------------->
+    <div *ngIf="expectationsAdd" (click)="expectationsAdd = !expectationsAdd" class="item element_add">
+        <div class="left">
+            <mat-icon fontIcon="checklist"></mat-icon>
+            Nasze oczekiwania
+        </div>
+        <div class="right">
+            <mat-icon fontIcon="navigate_next"></mat-icon>
+        </div>
+    </div>
+    <div *ngIf="!expectationsAdd" class="item inputs_item">
+        <div class="top" (click)="expectationsAdd = !expectationsAdd">
+            <div class="left">
+                <mat-icon fontIcon="checklist"></mat-icon>
+                Nasze oczekiwania
+            </div>
+            <div class="right">
+                <mat-icon fontIcon="close"></mat-icon>
+            </div>
+        </div>
+        <div class="skills_column">
+            <div *ngFor="let inputExpectations of managerCompanyOffer.expectationsForm; let i = index" class="inputs_container">
+                <input [(ngModel)]="inputExpectations.name">
+                <mat-icon (click)="deleteExpectations(i)" fontIcon="delete"></mat-icon>
+            </div>
+            <button (click)="managerCompanyOffer.addExpectationsForm()" class="skills_btn">Dodaj oczekiwanie</button>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------->
 </div>

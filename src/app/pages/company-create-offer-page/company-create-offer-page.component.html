@@ -124,8 +124,13 @@
                             </ul>
                         </div>
                         <div class="item">
-                            <div class="title_selection">Our expectations</div>
-                            <ul class="container_list">
+                            <div class="title_selection">Nasze oczekiwania</div>
+                            <ul *ngIf="managerCompanyOffer.expectationsForm[0]?.name" class="container_list">
+                                <li *ngFor="let expectationsForm of managerCompanyOffer.expectationsForm; let i = index">
+                                    {{expectationsForm.name}}
+                                </li>
+                            </ul>
+                            <ul *ngIf="!managerCompanyOffer.expectationsForm[0]?.name" class="container_list">
                                 <li>
                                     Minimum dwuletnie doświadczenie w pracy na podobnym stanowisku.                                </li>
                                 <li>

@@ -19,18 +19,13 @@ export class ManagerCompanyOfferService {
   aboutForm: string = '';
   receivedText: string = '';
 
-  stackForm: Array<StackForm> = [
-    
-  ]
+  stackForm: Array<StackForm> = []
 
-  
-  additionalStackForm: Array<StackForm> = [
+  additionalStackForm: Array<StackForm> = []
 
-  ]
+  responsibilitiesForm: Array<StackForm> = []
 
-  responsibilitiesForm: Array<StackForm> = [
-
-  ]
+  expectationsForm: Array<StackForm> = []
 
   constructor() { }
 
@@ -57,6 +52,13 @@ export class ManagerCompanyOfferService {
 
   addResponsibilitiesForm(){
     this.responsibilitiesForm.push(
+      {
+        name: ''
+      }
+    )
+  }
+  addExpectationsForm(){
+    this.expectationsForm.push(
       {
         name: ''
       }

@@ -15,6 +15,7 @@ export class CompanyCreateOfferFormComponent {
   skillsAdd = true
   additionalSkillsAdd = true
   responsibilitiesAdd = true
+  expectationsAdd = true
 
   constructor(
     public managerCompanyOffer: ManagerCompanyOfferService
@@ -24,12 +25,19 @@ export class CompanyCreateOfferFormComponent {
     this.managerCompanyOffer.stackForm.splice(id, 1)
     console.log(id)
   }
+
   deleteAdditionalSkill(id: number){
     this.managerCompanyOffer.additionalStackForm.splice(id, 1)
     console.log(id)
   }
+
   deleteResponsibilities(id: number){
     this.managerCompanyOffer.responsibilitiesForm.splice(id, 1)
+    console.log(id)
+  }
+
+  deleteExpectations(id: number){
+    this.managerCompanyOffer.expectationsForm.splice(id, 1)
     console.log(id)
   }
 
