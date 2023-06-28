@@ -64,48 +64,42 @@
                                 <!-- Przykładowy opis jednego z naszych klientów z sektora XYZ poszukującego XYZ Developera ze znajomością XYZ. Obecnie nasze zespoły pracują nad platformą dla XYZ oraz nad rozwojem platformy XYZ do monitorowania XYZ, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
                             </div>
                         </div>
-                        <div class="item">
+                        <div *ngIf="stackForm(managerCompanyOffer.stackForm).length != 0" class="item">
                             <div class="title_selection">Umiejętności</div>
-                            <div *ngIf="managerCompanyOffer.stackForm[0]?.name" class="stack_container">
-                                <div *ngFor="let stack of managerCompanyOffer.stackForm; let i = index" class="stack">
+                            <div class="stack_container">
+                                <div *ngFor="let stack of stackForm(managerCompanyOffer.stackForm); let i = index" class="stack">
                                     {{stack.name}}
                                 </div>
                             </div>
-                            <div *ngIf="!managerCompanyOffer.stackForm[0]?.name" class="stack_container">
+                            <!-- <div *ngIf="!managerCompanyOffer.stackForm[0]?.name" class="stack_container">
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
-                                <!-- <div class="stack">TypeScript</div>
-                                <div class="stack">Angular</div>
-                                <div class="stack">RWD</div> -->
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="item">
+                        <div *ngIf="additionalStackForm(managerCompanyOffer.additionalStackForm).length != 0" class="item">
                             <div class="title_selection">Warto znać</div>
-                            <div *ngIf="managerCompanyOffer.additionalStackForm[0]?.name" class="stack_container">
-                                <div *ngFor="let additionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="stack">
+                            <div class="stack_container">
+                                <div *ngFor="let additionalStack of additionalStackForm(managerCompanyOffer.additionalStackForm); let i = index" class="stack">
                                     {{additionalStack.name}}
                                 </div>
                             </div>
-                            <div *ngIf="!managerCompanyOffer.additionalStackForm[0]?.name" class="stack_container">
+                            <!-- <div *ngIf="!managerCompanyOffer.additionalStackForm[0]?.name" class="stack_container">
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
-                                <!-- <div class="stack">RxJS</div>
-                                <div class="stack">Jira</div>
-                                <div class="stack">Scrum</div> -->
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="item">
+                        <div *ngIf="responsibilitiesForm(managerCompanyOffer.responsibilitiesForm).length != 0" class="item">
                             <div class="title_selection">Twoje obowiązki</div>
-                            <ul *ngIf="managerCompanyOffer.responsibilitiesForm[0]?.name" class="container_list">
-                                <li *ngFor="let responsibilities of managerCompanyOffer.responsibilitiesForm; let i = index">
+                            <ul class="container_list">
+                                <li *ngFor="let responsibilities of responsibilitiesForm(managerCompanyOffer.responsibilitiesForm); let i = index">
                                     {{responsibilities.name}}
                                 </li>
                             </ul>
-                            <ul *ngIf="!managerCompanyOffer.responsibilitiesForm[0]?.name" class="container_list">
+                            <!-- <ul *ngIf="!managerCompanyOffer.responsibilitiesForm[0]?.name" class="container_list">
                                 <li>
                                     Wspieranie biznesu w przygotowywaniu wymagań na poziomie Analizy Wykonalności.
                                 </li>
@@ -121,16 +115,16 @@
                                 <li>
                                     Wykonywanie szacowania eksperckiego dla rozwiązań.
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
-                        <div class="item">
+                        <div *ngIf="expectationsForm(managerCompanyOffer.expectationsForm).length != 0" class="item">
                             <div class="title_selection">Nasze oczekiwania</div>
-                            <ul *ngIf="managerCompanyOffer.expectationsForm[0]?.name" class="container_list">
-                                <li *ngFor="let expectationsForm of managerCompanyOffer.expectationsForm; let i = index">
+                            <ul class="container_list">
+                                <li *ngFor="let expectationsForm of expectationsForm(managerCompanyOffer.expectationsForm); let i = index">
                                     {{expectationsForm.name}}
                                 </li>
                             </ul>
-                            <ul *ngIf="!managerCompanyOffer.expectationsForm[0]?.name" class="container_list">
+                            <!-- <ul *ngIf="!managerCompanyOffer.expectationsForm[0]?.name" class="container_list">
                                 <li>
                                     Minimum dwuletnie doświadczenie w pracy na podobnym stanowisku.                                </li>
                                 <li>
@@ -151,7 +145,7 @@
                                 <li>
                                     Realizacja zadań z nastawieniem na cele.
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
