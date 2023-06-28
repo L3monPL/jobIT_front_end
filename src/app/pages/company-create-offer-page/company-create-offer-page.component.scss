@@ -157,3 +157,21 @@
     line-height:20px;
     color: $color_3;
 }
+.header_bar{
+    height: 32px;
+    background-color: #3B3D42;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+}
+.header_bar mat-icon{
+    margin-left: 0.5rem;
+}
+.header_bar .back{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}

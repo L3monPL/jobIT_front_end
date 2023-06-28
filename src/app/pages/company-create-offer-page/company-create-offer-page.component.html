@@ -1,6 +1,11 @@
 <div class="page">
     <!-- <app-global-search></app-global-search> -->
-    <div class="bar_33px_height">
+    <div class="header_bar">
+        <div (click)="back()" class="back">
+            <mat-icon fontIcon="chevron_left"></mat-icon>
+            Lista ogłoszeń
+        </div>
+        
         <!-- dodaj do obserwowanych   /   udostępnij   /    -->
     </div>
     <div class="main_content">
@@ -61,12 +66,12 @@
                         </div>
                         <div class="item">
                             <div class="title_selection">Umiejętności</div>
-                            <div *ngIf="managerCompanyOffer.stackForm[0].name" class="stack_container">
+                            <div *ngIf="managerCompanyOffer.stackForm[0]?.name" class="stack_container">
                                 <div *ngFor="let stack of managerCompanyOffer.stackForm; let i = index" class="stack">
                                     {{stack.name}}
                                 </div>
                             </div>
-                            <div *ngIf="!managerCompanyOffer.stackForm[0].name" class="stack_container">
+                            <div *ngIf="!managerCompanyOffer.stackForm[0]?.name" class="stack_container">
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
@@ -79,12 +84,12 @@
                         </div>
                         <div class="item">
                             <div class="title_selection">Warto znać</div>
-                            <div *ngIf="managerCompanyOffer.additionalStackForm[0].name" class="stack_container">
+                            <div *ngIf="managerCompanyOffer.additionalStackForm[0]?.name" class="stack_container">
                                 <div *ngFor="let additionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="stack">
                                     {{additionalStack.name}}
                                 </div>
                             </div>
-                            <div *ngIf="!managerCompanyOffer.additionalStackForm[0].name" class="stack_container">
+                            <div *ngIf="!managerCompanyOffer.additionalStackForm[0]?.name" class="stack_container">
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
                                 <div class="stack">........</div>
@@ -95,12 +100,12 @@
                         </div>
                         <div class="item">
                             <div class="title_selection">Twoje obowiązki</div>
-                            <ul *ngIf="managerCompanyOffer.responsibilitiesForm[0].name" class="container_list">
+                            <ul *ngIf="managerCompanyOffer.responsibilitiesForm[0]?.name" class="container_list">
                                 <li *ngFor="let responsibilities of managerCompanyOffer.responsibilitiesForm; let i = index">
                                     {{responsibilities.name}}
                                 </li>
                             </ul>
-                            <ul *ngIf="!managerCompanyOffer.responsibilitiesForm[0].name" class="container_list">
+                            <ul *ngIf="!managerCompanyOffer.responsibilitiesForm[0]?.name" class="container_list">
                                 <li>
                                     Wspieranie biznesu w przygotowywaniu wymagań na poziomie Analizy Wykonalności.
                                 </li>

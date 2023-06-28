@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ManagerCompanyOfferService } from 'src/app/services/manager-services/manager-company-offer.service';
 
 @Component({
@@ -9,11 +10,12 @@ import { ManagerCompanyOfferService } from 'src/app/services/manager-services/ma
 export class CompanyCreateOfferPageComponent {
 
   constructor(
-    public managerCompanyOffer: ManagerCompanyOfferService
+    public managerCompanyOffer: ManagerCompanyOfferService,
+    private router: Router
   ) { }
 
   back(){
-    // this.router.navigateByUrl('./company')
+    this.router.navigateByUrl('./company')
   }
 
 }

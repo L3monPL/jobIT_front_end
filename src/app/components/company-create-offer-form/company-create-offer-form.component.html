@@ -126,8 +126,7 @@
         <div class="skills_column">
             <div *ngFor="let inputStack of managerCompanyOffer.stackForm; let i = index" class="inputs_container">
                 <input [(ngModel)]="inputStack.name">
-                <mat-icon *ngIf="i == 0" fontIcon="block"></mat-icon>
-                <mat-icon *ngIf="i >= 1" (click)="deleteSkill(i)" fontIcon="delete"></mat-icon>
+                <mat-icon (click)="deleteSkill(i)" fontIcon="delete"></mat-icon>
             </div>
             <button (click)="managerCompanyOffer.addStack()" class="skills_btn">Dodaj umiejętność</button>
         </div>
@@ -154,8 +153,7 @@
         <div class="skills_column">
             <div *ngFor="let inputAdditionalStack of managerCompanyOffer.additionalStackForm; let i = index" class="inputs_container">
                 <input [(ngModel)]="inputAdditionalStack.name">
-                <mat-icon *ngIf="i == 0" fontIcon="block"></mat-icon>
-                <mat-icon *ngIf="i >= 1" (click)="deleteAdditionalSkill(i)" fontIcon="delete"></mat-icon>
+                <mat-icon (click)="deleteAdditionalSkill(i)" fontIcon="delete"></mat-icon>
             </div>
             <button (click)="managerCompanyOffer.addAdditionalStack()" class="skills_btn">Dodaj dodatkową umiejętność</button>
         </div>
@@ -182,6 +180,7 @@
         <div class="skills_column">
             <div *ngFor="let inputResponsibilities of managerCompanyOffer.responsibilitiesForm; let i = index" class="inputs_container">
                 <input [(ngModel)]="inputResponsibilities.name">
+                <mat-icon (click)="deleteResponsibilities(i)" fontIcon="delete"></mat-icon>
             </div>
             <button (click)="managerCompanyOffer.addResponsibilitiesForm()" class="skills_btn">Dodaj kolejną dodatkową umiejętność</button>
         </div>

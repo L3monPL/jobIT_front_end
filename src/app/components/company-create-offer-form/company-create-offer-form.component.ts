@@ -28,6 +28,10 @@ export class CompanyCreateOfferFormComponent {
     this.managerCompanyOffer.additionalStackForm.splice(id, 1)
     console.log(id)
   }
+  deleteResponsibilities(id: number){
+    this.managerCompanyOffer.responsibilitiesForm.splice(id, 1)
+    console.log(id)
+  }
 
 
 }

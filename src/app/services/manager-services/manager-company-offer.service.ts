@@ -20,22 +20,16 @@ export class ManagerCompanyOfferService {
   receivedText: string = '';
 
   stackForm: Array<StackForm> = [
-    {
-      name: ''
-    }
+    
   ]
 
   
-  additionalStackForm = [
-    {
-      name: ''
-    }
+  additionalStackForm: Array<StackForm> = [
+
   ]
 
-  responsibilitiesForm = [
-    {
-      name: ''
-    }
+  responsibilitiesForm: Array<StackForm> = [
+
   ]
 
   constructor() { }
