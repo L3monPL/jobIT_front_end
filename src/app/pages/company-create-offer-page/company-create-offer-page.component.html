@@ -21,15 +21,14 @@
                             <div *ngIf="managerCompanyOffer.titleForm" class="offer_title">
                                 {{managerCompanyOffer.titleForm}}
                             </div> 
-                            <div *ngIf="!managerCompanyOffer.titleForm" class="offer_title">
+                            <!-- <div *ngIf="!managerCompanyOffer.titleForm" class="offer_title">
                                 ........................
-                                <!-- Nadaj tytuł oferty -->
-                            </div>                    
+                            </div>                     -->
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">
                                 <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary">{{managerCompanyOffer.fromSalaryForm}} - {{managerCompanyOffer.toSalaryForm}}</div>
-                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary">........................</div>
+                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary not_select_salary"></div>
                                 <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary value_salary">PLN</div>
                             </div>
                             <div class="exp_container">
@@ -44,25 +43,25 @@
                                 <mat-icon *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2" class="star" fontIcon="star_outline"></mat-icon>
                                 <mat-icon *ngIf="managerCompanyOffer.expForm == 1" class="star" fontIcon="star_outline"></mat-icon>
 
+                                <div *ngIf="!managerCompanyOffer.expForm" class="not_selected_star"></div>
+                                <!-- <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
                                 <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
-                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
-                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
+                                <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="content_company_bg">
                     <div class="margin_content">
-                        <div class="item">
+                        <div *ngIf="managerCompanyOffer.aboutForm" class="item">
                             <div class="title_selection">Informacje o ofercie</div>
-                            <div *ngIf="managerCompanyOffer.aboutForm" class="info_offer">
+                            <div class="info_offer">
                                 <div [innerHTML]="managerCompanyOffer.receivedText"></div>
                                 <!-- Dla jednego z naszych klientów z sektora bankowego poszukujemy Fullstack Developera ze znajomością Angular. Obecnie nasze zespoły pracują nad platformą dla bankowości inwestycyjnej oraz nad rozwojem platformy CIB do monitorowania portfela klientów, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
                             </div>
-                            <div *ngIf="!managerCompanyOffer.aboutForm" class="info_offer">
+                            <!-- <div *ngIf="!managerCompanyOffer.aboutForm" class="info_offer">
                                 ................................
-                                <!-- Przykładowy opis jednego z naszych klientów z sektora XYZ poszukującego XYZ Developera ze znajomością XYZ. Obecnie nasze zespoły pracują nad platformą dla XYZ oraz nad rozwojem platformy XYZ do monitorowania XYZ, wsparcia sprzedaży i identyfikacji postępu prac. Jeśli spełniasz poniższe wymagania, dołącz do nas już dziś! -->
-                            </div>
+                            </div> -->
                         </div>
                         <div *ngIf="stackForm(managerCompanyOffer.stackForm).length != 0" class="item">
                             <div class="title_selection">Umiejętności</div>

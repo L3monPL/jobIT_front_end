@@ -132,9 +132,15 @@
 .star{
     color: $color_3;
 }
+.not_selected_star{
+    height: 24px;
+}
 .salary{
     font-size: 1.1rem;
     margin-bottom: 1rem;
+}
+.not_select_salary{
+    height: 20px;
 }
 .salary_container{
     display: flex;
