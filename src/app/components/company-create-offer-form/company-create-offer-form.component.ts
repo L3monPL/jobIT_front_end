@@ -13,6 +13,8 @@ export class CompanyCreateOfferFormComponent {
   advancedAdd = true
   infoAdd = true
   skillsAdd = true
+  additionalSkillsAdd = true
+  responsibilitiesAdd = true
 
   constructor(
     public managerCompanyOffer: ManagerCompanyOfferService
@@ -20,6 +22,10 @@ export class CompanyCreateOfferFormComponent {
 
   deleteSkill(id: number){
     this.managerCompanyOffer.stackForm.splice(id, 1)
+    console.log(id)
+  }
+  deleteAdditionalSkill(id: number){
+    this.managerCompanyOffer.additionalStackForm.splice(id, 1)
     console.log(id)
   }
 
