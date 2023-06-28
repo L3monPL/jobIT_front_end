@@ -1,15 +1,15 @@
 <div class="page">
-    <!-- <app-global-search></app-global-search> -->
     <div class="header_bar">
         <div (click)="back()" class="back">
             <mat-icon fontIcon="chevron_left"></mat-icon>
             Lista ogłoszeń
         </div>
-        
-        <!-- dodaj do obserwowanych   /   udostępnij   /    -->
     </div>
     <div class="main_content">
         <div class="company_selected_main_content">
+            <div *ngIf="startCreateOffer()" class="start_do_offer_container">
+                Rozpocznij tworzenie oferty!
+            </div>
             <div class="margin_content_company">
                 <div class="header">
                     <div class="">
@@ -21,9 +21,6 @@
                             <div *ngIf="managerCompanyOffer.titleForm" class="offer_title">
                                 {{managerCompanyOffer.titleForm}}
                             </div> 
-                            <!-- <div *ngIf="!managerCompanyOffer.titleForm" class="offer_title">
-                                ........................
-                            </div>                     -->
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">

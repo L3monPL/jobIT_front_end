@@ -18,6 +18,24 @@ export class CompanyCreateOfferPageComponent {
     this.router.navigateByUrl('./company')
   }
 
+  startCreateOffer(): boolean{
+    let title = this.managerCompanyOffer.titleForm
+    let fromSalaryForm = this.managerCompanyOffer.fromSalaryForm
+    let toSalaryForm = this.managerCompanyOffer.toSalaryForm
+    let expForm = this.managerCompanyOffer.expForm
+    let aboutForm = this.managerCompanyOffer.aboutForm
+    let stackForm = this.managerCompanyOffer.stackForm.length
+    let additionalStackForm = this.managerCompanyOffer.additionalStackForm.length
+    let responsibilitiesForm = this.managerCompanyOffer.responsibilitiesForm.length
+    let expectationsForm = this.managerCompanyOffer.expectationsForm.length
+
+    let value = true
+    if (title || fromSalaryForm || toSalaryForm  || expForm  || aboutForm  || stackForm  || additionalStackForm  || responsibilitiesForm  || expectationsForm) {
+      value = false
+    }
+    return value
+  }
+
   stackForm(stackForm: any): Array<any>{
     let array = []
     for (let index = 0; index < stackForm.length; index++) {

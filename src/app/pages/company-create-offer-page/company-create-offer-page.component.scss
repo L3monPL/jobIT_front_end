@@ -13,6 +13,7 @@
 .company_selected_main_content{
     width: 60%;
     margin-top: 1rem;
+    position: relative;
     // background-color: #202020;
     // border-radius: 6px;
     // padding: 1rem;
@@ -182,4 +183,11 @@
     column-gap: 0.5rem;
     align-items: center;
     cursor: pointer;
+}
+.start_do_offer_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
 }
