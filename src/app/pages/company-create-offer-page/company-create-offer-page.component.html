@@ -18,39 +18,46 @@
                     <div class="image"></div>
                     <div class="title">
                         <div class="name_of_title">  
-                            <div *ngIf="managerCompanyOffer.titleForm" class="offer_title">
+                            <div [@In] *ngIf="managerCompanyOffer.titleForm" class="offer_title">
                                 {{managerCompanyOffer.titleForm}}
                             </div> 
                         </div>
                         <div class="right_in_header">
                             <div class="salary_container">
-                                <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary">{{managerCompanyOffer.fromSalaryForm}} - {{managerCompanyOffer.toSalaryForm}}</div>
-                                <div *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary not_select_salary"></div>
-                                <div *ngIf="managerCompanyOffer.fromSalaryForm" class="salary value_salary">PLN</div>
+                                <div [@In] *ngIf="managerCompanyOffer.fromSalaryForm" class="salary">{{managerCompanyOffer.fromSalaryForm}} - {{managerCompanyOffer.toSalaryForm}}</div>
+                                <div [@In] *ngIf="!managerCompanyOffer.fromSalaryForm" class="salary not_select_salary"></div>
+                                <div [@In] *ngIf="managerCompanyOffer.fromSalaryForm" class="salary value_salary">PLN</div>
                             </div>
-                            <div class="exp_container">
-                                <div *ngIf="managerCompanyOffer.expForm == 1" class="exp">Junior</div>
-                                <div *ngIf="managerCompanyOffer.expForm == 2" class="exp">Mid</div>
-                                <div *ngIf="managerCompanyOffer.expForm == 3" class="exp">Senior</div>
-                                <!-- <div *ngIf="!managerCompanyOffer.expForm" class="exp">Umiejętności</div> -->
-                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
-                                <mat-icon *ngIf="managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
-                                <mat-icon *ngIf="managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
-
-                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2" class="star" fontIcon="star_outline"></mat-icon>
-                                <mat-icon *ngIf="managerCompanyOffer.expForm == 1" class="star" fontIcon="star_outline"></mat-icon>
-
+                            <div *ngIf="!managerCompanyOffer.expForm" class="exp_container">
                                 <div *ngIf="!managerCompanyOffer.expForm" class="not_selected_star"></div>
                                 <!-- <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
                                 <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon>
                                 <mat-icon *ngIf="!managerCompanyOffer.expForm" class="star" fontIcon="star_outline"></mat-icon> -->
+                            </div>
+                            <div [@In] *ngIf="managerCompanyOffer.expForm == 1" class="exp_container">
+                                <div [@In] *ngIf="managerCompanyOffer.expForm == 1" class="exp">Junior</div>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 1" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 1 || managerCompanyOffer.expForm == 2" class="star" fontIcon="star_outline"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 1" class="star" fontIcon="star_outline"></mat-icon>
+                            </div>
+                            <div [@In] *ngIf="managerCompanyOffer.expForm == 2" class="exp_container">
+                                <div [@In] *ngIf="managerCompanyOffer.expForm == 2" class="exp">Mid</div>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 2 || managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 2" class="star" fontIcon="star_outline"></mat-icon>
+                            </div>
+                            <div [@In] *ngIf="managerCompanyOffer.expForm == 3" class="exp_container">
+                                <div class="exp">Senior</div>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
+                                <mat-icon [@In] *ngIf="managerCompanyOffer.expForm == 3" class="star" fontIcon="star"></mat-icon>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="content_company_bg">
                     <div class="margin_content">
-                        <div *ngIf="managerCompanyOffer.aboutForm" class="item">
+                        <div [@In] *ngIf="managerCompanyOffer.aboutForm" class="item">
                             <div class="title_selection">Informacje o ofercie</div>
                             <div class="info_offer">
                                 <div [innerHTML]="managerCompanyOffer.receivedText"></div>
@@ -60,7 +67,7 @@
                                 ................................
                             </div> -->
                         </div>
-                        <div *ngIf="stackForm(managerCompanyOffer.stackForm).length != 0" class="item">
+                        <div [@In] *ngIf="stackForm(managerCompanyOffer.stackForm).length != 0" class="item">
                             <div class="title_selection">Umiejętności</div>
                             <div class="stack_container">
                                 <div *ngFor="let stack of stackForm(managerCompanyOffer.stackForm); let i = index" class="stack">
@@ -75,7 +82,7 @@
                                 <div class="stack">........</div>
                             </div> -->
                         </div>
-                        <div *ngIf="additionalStackForm(managerCompanyOffer.additionalStackForm).length != 0" class="item">
+                        <div [@In] *ngIf="additionalStackForm(managerCompanyOffer.additionalStackForm).length != 0" class="item">
                             <div class="title_selection">Warto znać</div>
                             <div class="stack_container">
                                 <div *ngFor="let additionalStack of additionalStackForm(managerCompanyOffer.additionalStackForm); let i = index" class="stack">
@@ -88,7 +95,7 @@
                                 <div class="stack">........</div>
                             </div> -->
                         </div>
-                        <div *ngIf="responsibilitiesForm(managerCompanyOffer.responsibilitiesForm).length != 0" class="item">
+                        <div [@In] *ngIf="responsibilitiesForm(managerCompanyOffer.responsibilitiesForm).length != 0" class="item">
                             <div class="title_selection">Twoje obowiązki</div>
                             <ul class="container_list">
                                 <li *ngFor="let responsibilities of responsibilitiesForm(managerCompanyOffer.responsibilitiesForm); let i = index">
@@ -113,7 +120,7 @@
                                 </li>
                             </ul> -->
                         </div>
-                        <div *ngIf="expectationsForm(managerCompanyOffer.expectationsForm).length != 0" class="item">
+                        <div [@In] *ngIf="expectationsForm(managerCompanyOffer.expectationsForm).length != 0" class="item">
                             <div class="title_selection">Nasze oczekiwania</div>
                             <ul class="container_list">
                                 <li *ngFor="let expectationsForm of expectationsForm(managerCompanyOffer.expectationsForm); let i = index">
