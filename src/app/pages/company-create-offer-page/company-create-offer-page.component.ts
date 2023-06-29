@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ManagerCompanyOfferService } from 'src/app/services/manager-services/manager-company-offer.service';
@@ -5,7 +6,15 @@ import { ManagerCompanyOfferService } from 'src/app/services/manager-services/ma
 @Component({
   selector: 'app-company-create-offer-page',
   templateUrl: './company-create-offer-page.component.html',
-  styleUrls: ['./company-create-offer-page.component.scss']
+  styleUrls: ['./company-create-offer-page.component.scss'],
+  animations: [
+    trigger('In', [
+      state('void', style({ opacity: 0 })),
+      transition(':enter', [
+      animate('0.50s', style({ opacity: 1 })),
+    ]),
+    ])
+  ]
 })
 export class CompanyCreateOfferPageComponent {
 
