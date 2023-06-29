@@ -40,6 +40,16 @@
     height: 120px;
     background-color: #3B3D42;
 }
+.header_not_select{
+    position: relative;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    height: 120px;
+    background-color: #202020;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
 .content_company_bg{
     // height: auto;
     background-color: #202020;
@@ -49,6 +59,16 @@
     // padding-top: 2rem;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
+}
+.content_company_bg_not_select{
+    border: 1px solid #fff;
+    // height: auto;
+    background-color: #202020;
+    overflow-y: auto;
+    height: 500px;
+    height: calc(100vh - 16.4rem + 118px);
+    // padding-top: 2rem;
+    border-radius: 6px;
 }
 .content_company_bg::-webkit-scrollbar {
     // display: none;

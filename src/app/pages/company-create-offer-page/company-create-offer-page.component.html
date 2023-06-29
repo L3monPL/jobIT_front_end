@@ -6,16 +6,17 @@
         </div>
     </div>
     <div class="main_content">
-        <div class="company_selected_main_content">
-            <div [@In] *ngIf="startCreateOffer()" class="start_do_offer_container">
+        <div *ngIf="managerCompanyOffer.titleForm || managerCompanyOffer.fromSalaryForm || managerCompanyOffer.expForm" class="company_selected_main_content">
+            <!-- <div [@In] *ngIf="startCreateOffer()" class="start_do_offer_container">
                 Rozpocznij tworzenie oferty!
-            </div>
+            </div> -->
             <div class="margin_content_company">
-                <div class="header">
+                <!-- <div *ngIf="!managerCompanyOffer.titleForm && !managerCompanyOffer.fromSalaryForm && !managerCompanyOffer.expForm" class="header_not_select "></div> -->
+                <div [@In] *ngIf="managerCompanyOffer.titleForm || managerCompanyOffer.fromSalaryForm || managerCompanyOffer.expForm" class="header">
                     <div class="">
                         <mat-icon (click)="back()" fontIcon=""></mat-icon>
                     </div>
-                    <div class="image"></div>
+                    <div *ngIf="managerCompanyOffer.titleForm" class="image"></div>
                     <div class="title">
                         <div class="name_of_title">  
                             <div [@In] *ngIf="managerCompanyOffer.titleForm" class="offer_title">
@@ -151,6 +152,13 @@
                             </ul> -->
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!managerCompanyOffer.titleForm && !managerCompanyOffer.fromSalaryForm && !managerCompanyOffer.expForm" class="company_selected_main_content">
+            <div class="content_company_bg_not_select">
+                <div [@In] *ngIf="startCreateOffer()" class="start_do_offer_container">
+                    Rozpocznij tworzenie oferty!
                 </div>
             </div>
         </div>
