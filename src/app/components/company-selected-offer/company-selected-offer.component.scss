@@ -29,6 +29,7 @@
     // align-items: center;
     border-radius: 6px;
     // height: calc(100vh - 18.9rem);
+    height: calc(100vh - 142px);
 }
 .bar_33px_height{
     height: 33px;
@@ -158,9 +159,9 @@
     line-height:20px;
     color: $color_3;
 }
-// app-info-about-company-panel-in-offer{
-//     height: 50%;
-// }
-// app-list-of-company-offerts-panel-in-offer{
-//     height: 50%;
-// }
+app-info-about-company-panel-in-offer{
+    height: 50%;
+}
+app-list-of-company-offerts-panel-in-offer{
+    height: 50%;
+}
