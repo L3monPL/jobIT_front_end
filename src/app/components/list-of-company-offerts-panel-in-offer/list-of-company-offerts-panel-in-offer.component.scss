@@ -1,6 +1,6 @@
 @import './style/colors.scss';
 .page{
-    height: calc(100vh - 700px);
+    height: calc(50vh - 80px);
     // overflow-y: auto;
 }
 header{
@@ -42,9 +42,10 @@ header{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    // height: calc(100vh - 500px);
-    height: calc(100vh - 900px);
-    min-height: 272px;
+    height: calc(100% - 93px);
+    background-color: #202020;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     row-gap: 2rem;
     padding: 1rem;
 }

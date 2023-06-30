@@ -23,13 +23,13 @@
 .router{
     width: 40%;
     margin-top: 1rem;
-    background-color: #202020;
+    // background-color: #202020;
     // display: block;
-    // justify-content: center;
-    // align-items: center;
-    border-radius: 6px;
-    // height: calc(100vh - 18.9rem);
+    // border-radius: 6px;
     height: calc(100vh - 142px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 .bar_33px_height{
     height: 33px;
@@ -159,9 +159,9 @@
     line-height:20px;
     color: $color_3;
 }
-app-info-about-company-panel-in-offer{
-    height: 50%;
-}
-app-list-of-company-offerts-panel-in-offer{
-    height: 50%;
-}
+// app-info-about-company-panel-in-offer{
+//     height: 50%;
+// }
+// app-list-of-company-offerts-panel-in-offer{
+//     height: 50%;
+// }
