@@ -65,6 +65,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $color_3;
 }
 .stack_component{
     display: flex;
@@ -75,7 +76,8 @@ header{
     // margin-left: 2.8rem;
 }
 .stack_component .stack{
-    border: 1px solid #fff;
+    border: 1px solid  #fff;
+    // border-bottom: 1px solid  $color_2;
     padding: 2px 4px;
     border-radius: 8px;
 }
