@@ -4,6 +4,7 @@ import { CompanySelectedOfferComponent } from './company-selected-offer.componen
 import { RouterModule, Routes } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import { InfoAboutCompanyPanelInOfferModule } from '../info-about-company-panel-in-offer/info-about-company-panel-in-offer.module';
+import { ListOfCompanyOffertsPanelInOfferModule } from '../list-of-company-offerts-panel-in-offer/list-of-company-offerts-panel-in-offer.module';
 
 const routes: Routes = [
   {
@@ -34,7 +35,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MatIconModule,
-    InfoAboutCompanyPanelInOfferModule
+    InfoAboutCompanyPanelInOfferModule,
+    ListOfCompanyOffertsPanelInOfferModule
   ],
   exports: [
     CompanySelectedOfferComponent

@@ -1,4 +1,7 @@
 @import './style/colors.scss';
+.page{
+    // height: 50%;
+}
 header{
     background-color: $color_3;
     background-image: url(../../../assets/images/bg_bggenerator_com.png);
@@ -35,8 +38,11 @@ header{
 .content{
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
     row-gap: 2rem;
     padding: 1rem;
+    height: calc(100vh - 600px);
+    // height: calc(100vh - 620px);
 }
 .info_component{
     display: flex;

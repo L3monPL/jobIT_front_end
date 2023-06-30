@@ -1,0 +1,15 @@
+<div class="page">
+    <header>
+        <div class="title">
+            Inne aktualne oferty firmy
+        </div>
+        <div class="btn">
+            Przejdz do profilu firmy
+        </div>
+    </header>
+    <div class="content">
+        <div *ngFor="let item of itemList" (click)="selectItemOnList(item.id)" class="item_card">
+            <div class="image"></div>
+        </div>
+    </div>
+</div>

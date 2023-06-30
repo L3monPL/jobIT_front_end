@@ -1,0 +1,56 @@
+@import './style/colors.scss';
+.page{
+    height: calc(100vh - 700px);
+    // overflow-y: auto;
+}
+header{
+    background-color: $color_3;
+    background-image: url(../../../assets/images/bg_bggenerator_com.png);
+    background-position: 50%;
+    // padding: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 1rem;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+.btn{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 0.8rem;
+    // background-color: #3f3f3f;
+    background-color: #3f3f3f80;
+    padding: 8px 16px;
+    border-radius: 18px;
+    transition: 0.5s;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.btn:hover{
+    background-color: #3a3a3a;
+    transition: 0.5s;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    // height: calc(100vh - 500px);
+    height: calc(100vh - 900px);
+    min-height: 272px;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+.image{
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 6px;
+}
