@@ -1,0 +1,81 @@
+@import './style/colors.scss';
+header{
+    background-color: $color_3;
+    background-image: url(../../../assets/images/bg_bggenerator_com.png);
+    background-position: 50%;
+    // padding: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.company_container_name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 1rem;
+}
+.company_name{
+    font-size: 1rem;
+}
+.btn{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 0.8rem;
+    // background-color: #3f3f3f;
+    background-color: #3f3f3f80;
+    padding: 8px 16px;
+    border-radius: 18px;
+    transition: 0.5s;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.btn:hover{
+    background-color: #3a3a3a;
+    transition: 0.5s;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+.info_component{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.info_component .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.info_component .item_column{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.item p{
+    margin: 0px;
+}
+.info_component .item mat-icon{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stack_component{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+    // margin-left: 2.8rem;
+}
+.stack_component .stack{
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    border-radius: 8px;
+}

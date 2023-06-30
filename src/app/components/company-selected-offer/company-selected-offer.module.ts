@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CompanySelectedOfferComponent } from './company-selected-offer.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
+import { InfoAboutCompanyPanelInOfferModule } from '../info-about-company-panel-in-offer/info-about-company-panel-in-offer.module';
 
 const routes: Routes = [
   {
@@ -32,7 +33,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MatIconModule
+    MatIconModule,
+    InfoAboutCompanyPanelInOfferModule
   ],
   exports: [
     CompanySelectedOfferComponent
