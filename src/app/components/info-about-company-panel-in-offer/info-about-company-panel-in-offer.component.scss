@@ -41,7 +41,7 @@ header{
 .info_component{
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
 }
 .info_component .item{
     display: flex;
@@ -52,7 +52,7 @@ header{
 .info_component .item_column{
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
 }
 .item p{
     margin: 0px;
