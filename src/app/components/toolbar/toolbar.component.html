@@ -4,6 +4,9 @@
         <span (click)="home()" class="title">jobIt.me</span>
     </div>
     <div class="left">
+        <div *ngIf="this.userData.getUser()" (click)="profile()" class="btn companies">
+            Profile
+        </div>
         <div (click)="createCompanyOffer()" class="btn employees">
             Create Company Offer
         </div>

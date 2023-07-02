@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'company-offer-create',
     loadChildren: () => import('../company-create-offer-page/company-create-offer-page.module').then(m => m.CompanyCreateOfferPageModule)
   },
+  {
+    path: 'profile/:id',
+    loadChildren: () => import('../profile-settings-page/profile-settings-page.module').then(m => m.ProfileSettingsPageModule)
+  },
   { path: '**',   redirectTo: 'company/login', pathMatch: 'full' },
 ]
 

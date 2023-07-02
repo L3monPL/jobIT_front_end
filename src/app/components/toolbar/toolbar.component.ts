@@ -39,5 +39,8 @@ export class ToolbarComponent {
   createCompanyOffer(){
     this.router.navigateByUrl('/company-offer-create')
   }
+  profile(){
+    this.router.navigateByUrl(`/profile/${this.userData.user.id}`)
+  }
 
 }
