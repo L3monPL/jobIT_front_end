@@ -4,8 +4,9 @@
     // overflow-y: auto;
 }
 header{
-    background-color: $color_3;
+    background-color: $color_2;
     background-image: url(../../../assets/images/bg_bggenerator_com.png);
+    background-blend-mode:luminosity;
     background-position: 50%;
     // padding: 12px;
     border-top-left-radius: 6px;
