@@ -38,7 +38,9 @@
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     height: 120px;
-    background-color: #3B3D42;
+    background-color: $color_3;
+    background-image: url(../../../assets/images/bg_bggenerator_com.png);
+    background-position:50%;
 }
 .header_not_select{
     position: relative;
