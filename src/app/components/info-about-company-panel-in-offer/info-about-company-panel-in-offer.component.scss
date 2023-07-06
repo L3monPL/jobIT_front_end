@@ -3,9 +3,9 @@
     height: calc(50vh);
 }
 header{
-    background-color: $color_2;
-    // border-bottom: 1px solid #fff;
-    background-image: url(../../../assets/images/bg_bggenerator_com.png);
+    background-color: #454545;
+    border-bottom: 1px solid #ccc; 
+    // background-image: url(../../../assets/images/bg_bggenerator_com.png);
     background-blend-mode:luminosity;
     background-position: 50%;
     // padding: 12px;
@@ -20,21 +20,22 @@ header{
     padding: 12px 1rem;
 }
 .company_name{
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 .btn{
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 0.8rem;
     // background-color: #3f3f3f;
-    background-color: #3f3f3f80;
+    background-color: $color_2;
     padding: 8px 16px;
     border-radius: 18px;
     transition: 0.5s;
     font-family: Verdana, Geneva, sans-serif;
 }
 .btn:hover{
-    background-color: #3a3a3a;
+    background-color: #8F7AFF;
     transition: 0.5s;
 }
 .content{
